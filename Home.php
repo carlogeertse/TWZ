@@ -8,19 +8,8 @@
     </head>
 
     <body>
-            <div class = "menu">
-                <div class = "inner">
-                    <ul>
-                        <li>
-                            <a href = "#">Home</a>
-                        </li>
-                        <li>
-                            <a href = "#">Rooster</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
+        <?php include("Menu.php"); ?>
+
             <h1>
                 <b>
                     Homepage TWZ

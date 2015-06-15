@@ -1,3 +1,6 @@
+body {
+    background-color: lightblue;
+}
 .inner{
     margin :0 auto;
     width:800px;
@@ -8,7 +11,7 @@
 
 }
 .menu ul {
-    background:#000;
+    background: #0000ff;
     float:left;
     opacity:0.5;
     width:766px;
@@ -16,7 +19,6 @@
     margin-top:1px;
     margin:0;}
 .menu ul li {
-    background: url('../images/bg.png') no-repeat scroll right center transparent;
     float: left;
     display: inline;
     position:relative;
@@ -38,7 +40,7 @@
     position: absolute;
     left: 0px;
     width: 139px;
-    background: none repeat scroll 0% 0% #2D2D2D;
+    background: none repeat scroll 0% 0% #0000ff;
     border: 0px none;
     border-radius: 0px;
     top: 54px;
