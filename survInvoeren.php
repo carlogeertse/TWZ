@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <?php include ("connectDB.php"); ?>
 <?php
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $firstname = mysql_real_escape_string ($_POST['Voornaam']);
-    $lastname = mysql_real_escape_string ($_POST['Achternaam']);
-    $address = mysql_real_escape_string ($_POST['Adres']);
-    $zipcode = mysql_real_escape_string ($_POST['Postcode']);
-    $bankaccount = mysql_real_escape_string ($_POST['Rekeningnummer']);
-    $phonenumber = mysql_real_escape_string ($_POST['Telefoonnummer']);
-    $email = mysql_real_escape_string ($_POST['E-mailadres']);
-
-    $sql = "INSERT INTO 'surveillanten' ('Voornaam', 'Achternaam', 'adres',
-                                          'postcode', 'rekening_nummer', 'telefoon', 'e-mail')
-            VALUES ('$firstname', '$lastname', '$address', '$zipcode', '$bankaccount', '$phonenumber', '$email');";
+        $sql = "INSERT INTO surveillanten(Voornaam, Achternaam, adres, postcode, rekening_nummer, telefoon, email)
+				VALUES('".$_POST['Voornaam']."',
+            '".$_POST['Achternaam']."',
+            '".$_POST['Adres']."',
+            '".$_POST['Postcode']."',
+            '".$_POST['Rekeningnummer']."',
+            '".$_POST['Telefoonnummer']."',
+            '".$_POST['E-mailadres']."');";
+        
+        $conn->query($sql);
+        echo $conn->connect_error;
+    }
 ?>
 <html>
     <head>
@@ -30,13 +32,13 @@
             Invoeren surveillanten
         </h1>
         <table>
-            <form method = "post" action="<?php $_PHP_SELF ?>">
+            <form method = "post" action="survInvoeren.php">
                 <tr>
                     <td>
                         Voornaam:
                     </td>
                     <td>
-                        <input type="text" id="Voornaam" required>
+                        <input type="text" name="Voornaam" required>
                     </td>
                 </tr>
                 <tr>
@@ -44,7 +46,7 @@
                         Achternaam:
                     </td>
                     <td>
-                        <input type="text" id="Achternaam" required>
+                        <input type="text" name="Achternaam" required>
                     </td>
                 </tr>
                 <tr>
@@ -52,7 +54,7 @@
                         Adres:
                     </td>
                     <td>
-                        <input type="text" id="Adres" required>
+                        <input type="text" name="Adres" required>
                     </td>
                 </tr>
                 <tr>
@@ -60,7 +62,7 @@
                         Postcode:
                     </td>
                     <td>
-                        <input type="text" id="Postcode" required>
+                        <input type="text" name="Postcode" required>
                     </td>
                 </tr>
                 <tr>
@@ -68,7 +70,7 @@
                         Rekeningnummer:
                     </td>
                     <td>
-                        <input type="text" id="Rekeningnummer" required>
+                        <input type="text" name="Rekeningnummer" required>
                     </td>
                 </tr>
                 <tr>
@@ -76,7 +78,7 @@
                         Telefoonnummer:
                     </td>
                     <td>
-                        <input type="text" id="Telefoonnummer" pattern="^\d{3}-\d{6}" required>
+                        <input type="text" name="Telefoonnummer" pattern="^\d{4}-\d{6}" required>
                     </td>
                 </tr>
                 <tr>
@@ -84,12 +86,12 @@
                         E-mailadres:
                     </td>
                     <td>
-                        <input type="email" id="E-mailadres" required>
+                        <input type="email" name="E-mailadres" required>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Submit" name = "submit">
                     </td>
                 </tr>
             </form>
