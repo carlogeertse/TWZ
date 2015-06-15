@@ -1,7 +1,18 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Tobias
- * Date: 15-6-2015
- * Time: 13:36
- */
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Rooster van de surveillanten
+        </title>
+        <link rel = "stylesheet" type = "text/css" href = "Style.css">
+    </head>
+
+    <body>
+        <?php
+            include ("Menu.php");
+        ?>
+        <h1>
+            Invoeren surveillanten
+        </h1>
+    </body>
+</html>
