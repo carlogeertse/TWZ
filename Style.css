@@ -32,7 +32,7 @@ body {
 }
 .menu ul li a:hover
 {
-    color: #fff000;
+    color: #000000; background-color: #FFFFFF;
 
 }
 
@@ -49,7 +49,7 @@ body {
 }
 .menu  ul ul li {padding:6px 10px;}
 .menu  ul ul li a {color:#FFFFFF;}
-.menu  ul ul li a:hover {color:#fff000}
+.menu  ul ul li a:hover {color:#000000; background-color: #FFFFFF;}
 .menu  ul li:hover ul{display:inherit;}
 .search{
     float:left;
