@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php include ("connectDB.php"); ?>
 <html>
     <head>
         <title>
