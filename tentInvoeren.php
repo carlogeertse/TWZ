@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php include ("connectDB.php"); ?>
+<?php include ("connectDB.php");?>
 <html>
     <head>
         <title>
@@ -11,6 +11,12 @@
     <body>
         <?php
             include("Menu.php");
+            if($_SERVER["REQUEST_METHOD"]=="POST")
+            {
+                echo $_POST['academie'];
+            }
+            else
+            {
         ?>
         <h1>
             Invoeren tentamens
@@ -24,20 +30,17 @@
         $sql = "SELECT *
                 FROM academie";
         $academies = $conn->query($sql);
-
-            if($academies->fetch_assoc() > 0){
-            echo "hoi ik ben piet";
-            while($row = $academies->fetch_assoc())
-            {
-                //echo"<option value='academieNaam'>".$row['naam']."</option>";
-            }
-        }
-        echo "hierwel";
         ?>
-        <form action="tentInvoeren.php">
+        <form action="tentInvoeren.php" method = "POST">
             <br>
             academie:<br>
             <select name="academie">
+                <?php if($academies->num_rows > 0) {
+                    while ($row = $academies->fetch_assoc()) {
+                        echo "<option>" . $row['naam'] . "</option>";
+                    }
+                }
+                ?>
             </select>
             <br>
             datum: (format dd-mm-jjjj)
@@ -58,5 +61,6 @@
             <br>
             <input type="submit" value="Submit">
         </form>
+        <?php } ?>
     </body>
 </html>
