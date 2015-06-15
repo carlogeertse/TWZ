@@ -21,7 +21,7 @@
                         Voornaam:
                     </td>
                     <td>
-                        <input type = "text" name = "Voornaam" required>
+                        <input type="text" name="Voornaam" required>
                     </td>
                 </tr>
                 <tr>
@@ -29,7 +29,7 @@
                         Achternaam:
                     </td>
                     <td>
-                        <input type = "text" name = "Achternaam" required>
+                        <input type="text" name="Achternaam" required>
                     </td>
                 </tr>
                 <tr>
@@ -37,7 +37,7 @@
                         Straatnaam:
                     </td>
                     <td>
-                        <input type = "text" name = "Straatnaam" required>
+                        <input type="text" name="Straatnaam" required>
                     </td>
                 </tr>
                 <tr>
@@ -45,7 +45,7 @@
                         Huisnummer:
                     </td>
                     <td>
-                        <input type = "text" name = "Huisnummer" required>
+                        <input type="text" name="Huisnummer" required>
                     </td>
                 </tr>
                 <tr>
@@ -53,7 +53,7 @@
                         Postcode:
                     </td>
                     <td>
-                        <input type = "text" name = "Postcode" required>
+                        <input type="text" name="Postcode" required>
                     </td>
                 </tr>
                 <tr>
@@ -61,7 +61,7 @@
                         Stad:
                     </td>
                     <td>
-                        <input type = "text" name = "Stad" required>
+                        <input type="text" name="Stad" required>
                     </td>
                 </tr>
                 <tr>
@@ -69,7 +69,7 @@
                         Rekeningnummer:
                     </td>
                     <td>
-                        <input type = "text" name = "Rekeningnummer" required>
+                        <input type="text" name="Rekeningnummer" required>
                     </td>
                 </tr>
                 <tr>
@@ -77,7 +77,7 @@
                         Telefoonnummer:
                     </td>
                     <td>
-                        <input type = "text" name = "Telefoonnummer" pattern = "^\d{3}-\d{6}" required>
+                        <input type="text" name="Telefoonnummer" pattern="^\d{3}-\d{6}" required>
                     </td>
                 </tr>
                 <tr>
@@ -85,12 +85,12 @@
                         E-mailadres:
                     </td>
                     <td>
-                        <input type = "email" name = "E-mailadres" required>
+                        <input type="email" name="E-mailadres" required>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type = "button" value = "Submit">
+                        <input type="button" value="Submit">
                     </td>
                 </tr>
             </form>
