@@ -90,7 +90,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="button" value="Submit">
+                        <input type="submit" value="Submit">
                     </td>
                 </tr>
             </form>
