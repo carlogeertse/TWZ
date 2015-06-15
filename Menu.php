@@ -11,10 +11,10 @@
                 <div class = "inner">
                     <ul>
                         <li>
-                            <a href = "home.php">Home</a>
+                            <a href = "Home.php">Home</a>
                         </li>
                         <li>
-                            <a href = "rooster.php">Rooster</a>
+                            <a href = "Rooster.php">Rooster</a>
                             <ul>
                                 <li>
                                     <a href = "survRooster.php">Surveillantenrooster</a>
@@ -23,6 +23,20 @@
                                     <a href = "tentRooster.php">Tentamenrooster</a>
                                 </li>
                             </ul>
+                        </li>
+                        <li>
+                            <a href = "Invoeren.php">Invoeren</a>
+                            <ul>
+                                <li>
+                                    <a href = "survInvoeren.php">Invoeren Surveillanten</a>
+                                </li>
+                                <li>
+                                    <a href = "tentInvoeren.php">Invoeren Tentamens</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href = "Inplannen.php">Inplannen</a>
                         </li>
                     </ul>
                 </div>
