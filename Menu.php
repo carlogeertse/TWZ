@@ -11,7 +11,7 @@
                 <div class = "inner">
                     <ul>
                         <li>
-                            <a href = "Home.php">Home</a>
+                            <a href = "index.php">Home</a>
                         </li>
                         <li>
                             <a href = "Rooster.php">Rooster</a>

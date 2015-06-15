@@ -1,10 +1,19 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Hallo Wereld</title>
+    <title>
+        Homepage
+    </title>
+    <link rel = "stylesheet" type = "text/css" href = "Style.css">
 </head>
-<body>
 
+<body>
+<?php include("Menu.php"); ?>
+
+<h1>
+    <b>
+        Homepage TWZ
+    </b>
+</h1>
 </body>
 </html>
