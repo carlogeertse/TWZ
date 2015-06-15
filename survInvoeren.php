@@ -15,7 +15,7 @@
             Invoeren surveillanten
         </h1>
         <table>
-            <form>
+            <form action="survInvoeren.php">
                 <tr>
                     <td>
                         Voornaam:
