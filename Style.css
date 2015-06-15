@@ -18,6 +18,7 @@ body {
     border-radius:30px;
     margin-top:1px;
     margin:0;}
+
 .menu ul li {
     float: left;
     display: inline;
@@ -31,7 +32,7 @@ body {
 }
 .menu ul li a:hover
 {
-    color:#060;
+    color: #fff000;
 
 }
 
@@ -39,15 +40,16 @@ body {
     display: none;
     position: absolute;
     left: 0px;
-    width: 139px;
+    width: 150px;
     background: none repeat scroll 0% 0% #0000ff;
     border: 0px none;
     border-radius: 0px;
     top: 54px;
+
 }
 .menu  ul ul li {padding:6px 10px;}
-.menu  ul ul li a {color:#a9a9a9;}
-.menu  ul ul li a:hover {color:#fff}
+.menu  ul ul li a {color:#FFFFFF;}
+.menu  ul ul li a:hover {color:#fff000}
 .menu  ul li:hover ul{display:inherit;}
 .search{
     float:left;
