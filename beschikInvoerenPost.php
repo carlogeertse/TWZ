@@ -53,13 +53,13 @@ $result = $conn->query($sql);
             echo "<td> Middag </td>";
             for($i=0; $i<7; $i++)
             {
-                echo '<td><input type="checkbox" name="'.$row['Voornaam'].' '.$row['Achternaam'].$i.'o"></td>';
+                echo '<td><input type="checkbox" name="'.$row['Voornaam'].' '.$row['Achternaam'].$i.'m"></td>';
             }
             echo "</tr><tr><td></td>";
             echo "<td> Avond </td>";
             for($i=0; $i<7; $i++)
             {
-                echo '<td><input type="checkbox" name="'.$row['Voornaam'].' '.$row['Achternaam'].$i.'o"></td>';
+                echo '<td><input type="checkbox" name="'.$row['Voornaam'].' '.$row['Achternaam'].$i.'a"></td>';
             }
             echo "</tr>";
         }
