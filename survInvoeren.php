@@ -11,7 +11,7 @@
             '".$_POST['Rekeningnummer']."',
             '".$_POST['Telefoonnummer']."',
             '".$_POST['E-mailadres']."');";
-        
+
         $conn->query($sql);
         echo $conn->connect_error;
     }
