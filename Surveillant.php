@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <?php
     include ("connectDB.php");
-
-    $sql = "SELECT Achternaam, Voornaam
-            FROM Surveillant
-            ORDER BY Achternaam;";
-    $conn->query($sql);
 ?>
 <html>
     <head>
@@ -18,20 +13,20 @@
     <body>
         <?php include("Menu.php"); ?>
         <h1>
-            Alle huidig bestaande surveillanten voor TWZ:
+            Wat wilt u doen met betrekking to Surveillanten?
         </h1>
 
-        <h3>
-            Welke surveillant wilt u verwijderen?
-        </h3>
-        <select name = "surveillanten">
-            <?php
-                if ($academies->num_rows > 0) {
-                    while ($row = $academies->fetch_assoc()) {
-                        echo "<option>" . $row['naam'] . "</option>";
-                    }
-                }
-            ?>
-        </select>
+        <ul>
+            <li>
+                <a href = "survInvoeren.php">Nieuwe Surveillant toevoegen</a>
+            </li>
+            <li>
+                <a href = "survRooster.php">Rooster van Surveillanten bekijken</a>
+            </li>
+            <li>
+                <a href = "survVerwijderen.php">Bestaande Surveillant verwijderen</a>
+            </li>
+        </ul>
+
     </body>
 </html>
