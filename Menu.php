@@ -3,6 +3,7 @@
         <title>
 
         </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel = "stylesheet" type = "text/css" href = "Style.css">
     </head>
 
@@ -32,6 +33,9 @@
                                 </li>
                                 <li>
                                     <a href = "survRooster.php">Rooster Surveillanten</a>
+                                </li>
+                                <li>
+                                    <a href = "survVerwijderen.php">Surveillant verwijderen</a>
                                 </li>
                             </ul>
                         </li>
