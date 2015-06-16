@@ -32,7 +32,7 @@ $result = $conn->query($sql);
         <td></td>
         <?php
         $week_number = 0;
-        for($day=1; $day<=7; $day++)
+        for($day=1; $day<=5; $day++)
         {
             echo "<td>".date('m/d/Y', strtotime($jaar."W".$week.$day))."</td>";
         }
@@ -44,20 +44,20 @@ $result = $conn->query($sql);
         {
             echo "<tr><td>".$row['Voornaam']." ".$row['Achternaam']."</td>";
             echo "<td> Ochtend </td>";
-            for($i=0; $i<7; $i++)
+            for($i=0; $i<5; $i++)
             {
                 echo '<td><input type="checkbox" name="'.$row['Voornaam'].' '.$row['Achternaam'].$i.'o"></td>';
             }
             //Begin op een nieuwe regel
             echo "</tr><tr><td></td>";
             echo "<td> Middag </td>";
-            for($i=0; $i<7; $i++)
+            for($i=0; $i<5; $i++)
             {
                 echo '<td><input type="checkbox" name="'.$row['Voornaam'].' '.$row['Achternaam'].$i.'m"></td>';
             }
             echo "</tr><tr><td></td>";
             echo "<td> Avond </td>";
-            for($i=0; $i<7; $i++)
+            for($i=0; $i<5; $i++)
             {
                 echo '<td><input type="checkbox" name="'.$row['Voornaam'].' '.$row['Achternaam'].$i.'a"></td>';
             }
