@@ -25,18 +25,21 @@
                             </ul>
                         </li>
                         <li>
-                            <a href = "Invoeren.php">Invoeren</a>
+                            <a href = "Surveillant.php">Surveillanten</a>
                             <ul>
                                 <li>
                                     <a href = "survInvoeren.php">Invoeren Surveillanten</a>
                                 </li>
                                 <li>
-                                    <a href = "tentInvoeren.php">Invoeren Tentamens</a>
-                                </li>
-                                <li>
-                                    <a href = "beschikInvoeren.php">Invoeren beschikbaarheid</a>
+                                    <a href = "survRooster.php">Rooster Surveillanten</a>
                                 </li>
                             </ul>
+                        </li>
+                        <li>
+                            <a href = "beschikInvoeren.php">Invoeren beschikbaarheid</a>
+                        </li>
+                        <li>
+                            <a href = "tentInvoeren.php">Invoeren tentamens</a>
                         </li>
                         <li>
                             <a href = "Inplannen.php">Inplannen</a>
