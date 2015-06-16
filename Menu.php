@@ -33,6 +33,9 @@
                                 <li>
                                     <a href = "tentInvoeren.php">Invoeren Tentamens</a>
                                 </li>
+                                <li>
+                                    <a href = "beschikInvoeren.php">Invoeren beschikbaarheid</a>
+                                </li>
                             </ul>
                         </li>
                         <li>
