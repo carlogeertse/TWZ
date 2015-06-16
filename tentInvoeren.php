@@ -1,22 +1,34 @@
 <!DOCTYPE html>
-<?php include ("connectDB.php");?>
+<?php include("connectDB.php"); ?>
 <html>
     <head>
         <title>
             Rooster van de surveillanten
         </title>
-        <link rel = "stylesheet" type = "text/css" href = "Style.css">
+        <link rel="stylesheet" type="text/css" href="Style.css">
     </head>
 
     <body>
         <?php
             include("Menu.php");
-            if($_SERVER["REQUEST_METHOD"]=="POST")
-            {
-                echo $_POST['academie'];
-            }
-            else
-            {
+            if ($_SERVER["REQUEST_METHOD"] == "POST"){
+                $sqlID = "SELECT academie_ID
+                         FROM academie
+                         WHERE naam ='" . $_POST['academie'] . "'";
+                $result=$conn->query($sqlID);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+
+                        $sqli = "INSERT INTO tentamen(academie_ID, datum, begin_tijd, eind_tijd, lokaal)
+                                 VALUES ('" . $row['academie_ID'] . "',
+                                         '" . $_POST['datum'] . "',
+                                         '" . $_POST['begintijd'] . "',
+                                         '" . $_POST['eindtijd'] . "',
+                                         '" . $_POST['lokaal'] . "');";
+                        $conn->query($sqli);
+                    }
+                }
+            } else {
         ?>
         <h1>
             Invoeren tentamens
@@ -25,17 +37,17 @@
         <h3>
             Invoeren van tentamens op het rooster. Hier worden alle tentamens ingeroosterd.
         </h3>
-
-        <?php include("connectDB.php");
-        $sql = "SELECT *
-                FROM academie";
-        $academies = $conn->query($sql);
+        <?php
+            $sql = "SELECT *
+                    FROM academie";
+            $academies = $conn->query($sql);
         ?>
-        <form action="tentInvoeren.php" method = "POST">
+        <form action="tentInvoeren.php" method="POST">
             <br>
-            academie:<br>
+                Academie:
+            <br>
             <select name="academie">
-                <?php if($academies->num_rows > 0) {
+                <?php if ($academies->num_rows > 0) {
                     while ($row = $academies->fetch_assoc()) {
                         echo "<option>" . $row['naam'] . "</option>";
                     }
@@ -43,24 +55,26 @@
                 ?>
             </select>
             <br>
-            datum: (format dd-mm-jjjj)
+            Datum: (format dd-mm-jjjj)
             <br>
             <input type="date" name="datum">
             <br>
-            begintijd: (format hh:mm)
+            Begintijd: (format hh:mm)
             <br>
             <input type="time" name="begintijd">
             <br>
-            eindtijd: (format hh:mm)
+            Eindtijd: (format hh:mm)
             <br>
             <input type="time" name="eindtijd">
             <br>
-            lokaal:
+            Lokaal:
             <br>
             <input type="text" name="lokaal">
             <br>
             <input type="submit" value="Submit">
         </form>
-        <?php } ?>
+        <?php
+            }
+        ?>
     </body>
 </html>
