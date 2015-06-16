@@ -1,44 +1,105 @@
 <html>
     <head>
         <title>
-
+            FUCK DEZE OPDRACHT!
         </title>
+        <meta charset = "UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <style type = "text/css">
+            body {
+                margin: 0;
+                background-image: url ('background.jpg');
+                background-size: 1920px 1080px;
+                background-repeat: no-repeat;
+                display: compact;
+            }
+            .bs-example {
+                margin: 20px;
+            }
+        </style>
     </head>
 
     <body>
-        <ul class = "nav nav-tabs">
-            <li class = "active">
-                <a class = "navbar-brand" href = "index.php">
-                    Home
-                </a>
-            </li>
-            <li class = "dropdown">
-                <a class = "dropdown-toggle" data-toggle = "dropdown" href = "Surveillant.php">
-                    Surveillanten
-                    <span class = "caret"></span>
-                </a>
-                <ul class = "dropdown-menu">
-                    <li>
-                        <a href = "survInvoeren.php">Invoeren Surveillanten</a>
-                    </li>
-                    <li>
-                        <a href = "survRooster.php">Rooster Surveillanten</a>
-                    </li>
-                    <li>
-                        <a href = "survVerwijderen.php">Surveillant verwijderen</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href = "beschikInvoeren.php">Invoeren beschikbaarheid</a>
-            </li>
-            <li>
-                <a href = "tentInvoeren.php">Invoeren tentamens</a>
-            </li>
-            <li>
-                <a href = "Inplannen.php">Inplannen</a>
-            </li>
-        </ul>
+        <div class = "bs-example">
+            <nav id = "myNavbar"class = "navbar navbar-default" role = "navigation">
+                <div class = "container">
+                    <div class = "navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.php">Home</a>
+                    </div>
+                    <div class = "collapse navbar-collapse" id = "bs-example-navbar-collapse-1">
+                        <ul class = "nav navbar-nav">
+                            <li class = "dropdown">
+                                <a href = "#" data-toggle = "dropdown" class = "dropdown-toggle">
+                                    Surveillant
+                                    <b class = "caret">
+
+                                    </b>
+                                </a>
+                                <ul class = "dropdown-menu">
+                                    <li>
+                                        <a href = "survInvoeren.php">
+                                            Toevoegen Surveillant
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href = "survVerwijderen.php">
+                                            Verwijderen Surveillant
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href = "survRooster.php">
+                                            Rooster Surveillanten
+                                        </a>
+                                    </li>
+                                    <li class = "divider" />
+                                    <li>
+                                        <a href = "#">
+                                            Trash
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class = "nav navbar-nav navbar-right">
+                            <li class = "dropdown">
+                                <a href = "#" data-toggle = "dropdown" class = "dropdown-toggle">
+                                    Admin
+                                    <b class = "caret">
+
+                                    </b>
+                                </a>
+                                <ul class = "dropdown-menu">
+                                    <li>
+                                        <a href = "#">
+                                            Action
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href = "#">
+                                            Another Action
+                                        </a>
+                                    </li>
+                                    <li class = "divider" />
+                                    <li>
+                                        <a href = "#">
+                                            Settings
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </body>
 </html>

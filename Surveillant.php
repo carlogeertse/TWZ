@@ -7,13 +7,13 @@
         <title>
             Homepage
         </title>
-        <link rel = "stylesheet" type = "text/css" href = "Style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     </head>
 
     <body>
         <?php include("Menu.php"); ?>
         <h1>
-            Wat wilt u doen met betrekking to Surveillanten?
+            Wat wilt u doen met betrekking tot Surveillanten?
         </h1>
 
         <ul>
