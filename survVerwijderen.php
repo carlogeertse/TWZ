@@ -7,7 +7,7 @@
         <title>
             Verwijderen surveillant
         </title>
-        <link rel = "stylesheet" type = "text/css" href = "Style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     </head>
 
     <body>
