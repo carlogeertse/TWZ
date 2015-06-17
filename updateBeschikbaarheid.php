@@ -4,8 +4,8 @@
 
     //Ophalen Post variabelen
     $isChecked = $_POST['isChecked'];
-    $uid = $_POST['uid'];
-    $rank = $_POST['rank'];
+    $id = $_POST['id'];
+    $date = $_POST['date'];
 
     echo 'success';
 
