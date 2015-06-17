@@ -9,6 +9,11 @@
 </head>
 
 <body style = "background-image: url(download.jpg); position: relative; background-size: cover;">
+<style type = "text/css">
+    #spaceUnder > td {
+        padding-bottom: 1em;
+    }
+</style>
 <?php include("Menu.php"); ?>
 <h1>
     tentamens met surveillanten per academie:
@@ -50,26 +55,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     ?>
     <form action="finansurveillant.php" method="POST">
-        <br>
-        Academie:
-        <br>
-        <select name="academie">
-            <?php if ($academies->num_rows > 0) {
-                while ($row = $academies->fetch_assoc()) {
-                    echo '<option value=' . $row['academie_ID'] . '>' . $row['naam'] . '</option>';
-                }
-            }
-            ?>
-            Selecteer een week:
-        </select>
-        <br>
-        Begin datum:
-        <br>
-        <input type="date" name="begin">
-        <br>
-        Eind datum:
-        <br>
-        <input type="date" name="eind">
-        <br>
-        <input type="submit" value="Submit">
+        <table>
+            <tr id = "spaceUnder">
+                <td>
+                    Academie:
+                </td>
+                <td>
+                    <select name="academie">
+                        <?php if ($academies->num_rows > 0) {
+                            while ($row = $academies->fetch_assoc()) {
+                                echo '<option value=' . $row['academie_ID'] . '>' . $row['naam'] . '</option>';
+                            }
+                        }
+                        ?>
+                        Selecteer een week:
+                    </select>
+                </td>
+            </tr>
+            <tr id = "spaceUnder">
+                <td>
+                    Begin datum:
+                </td>
+                <td>
+                    <input type="date" name="begin">
+                </td>
+            </tr>
+            <tr id = "spaceUnder">
+                <td>
+                    Eind datum:
+                </td>
+                <td>
+                    <input type="date" name="eind">
+                </td>
+            </tr>
+            <tr id = "spaceUnder">
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
     </form>
