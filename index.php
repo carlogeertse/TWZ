@@ -11,7 +11,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </head>
 
-    <body style = "background-image: url(background.jpg); background-size: cover;">
+    <body style = "background-image: url(blackground.jpg); background-size: cover;">
         <?php include("Menu.php"); ?>
 
     </body>
