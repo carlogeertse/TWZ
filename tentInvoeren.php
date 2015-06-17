@@ -12,12 +12,13 @@
 <?php
 include("Menu.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $sqli = "INSERT INTO tentamen(academie_ID, datum, begin_tijd, eind_tijd, lokaal)
+    $sqli = "INSERT INTO tentamen(academie_ID, datum, begin_tijd, eind_tijd, lokaal, omschrijving)
                                  VALUES ('" . $_POST['academie'] . "',
                                          '" . $_POST['datum'] . "',
                                          '" . $_POST['begintijd'] . "',
                                          '" . $_POST['eindtijd'] . "',
-                                         '" . $_POST['lokaal'] . "');";
+                                         '" . $_POST['lokaal'] . "',
+                                         '" . $_POST['omschrijving'] . "');";
     $conn->query($sqli);
     echo "<h2>Tentamen toegevoegd!</h2>";
 }
@@ -62,6 +63,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         Lokaal:
         <br>
         <input type="text" name="lokaal">
+        <br>
+        omschrijving:
+        <br>
+        <input type="text" name="omschrijving">
         <br>
         <input type="submit" value="Submit">
     </form>
