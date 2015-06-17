@@ -1,20 +1,22 @@
-$(function() {
+$(document).ready(function(){
     $('input[type="checkbox"]').on('change', function() {
         var checked = $(this).prop('checked');
         var value = $(this).val();
         var attrName = $(this).prop('name');
-        var data = {isChecked: checked, uid: value, rank: attrName};
+        var data = {isChecked: checked, id: value, date: attrName};
 
-        $.ajax({	url: "updateBeschikbaarheid.php",
+        $.ajax({
+            url: "updateBeschikbaarheid.php",
             type: "POST",
             data: data,
             success: function(result){
                 if(result == 'success') {
-                    $("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>×</button>User with UID: " + value + " succesfully updated.</div>").insertAfter('.lead');
+                    console.log("hoi");
+                    $("div.textDiv").text("<p>This is a test.</p>");
                 } else {
-                    $("<div class='alert alert-error'><button type='button' class='close' data-dismiss='alert'>×</button>User with UID: " + value + " could not be updated.</div>").insertAfter('.lead');
+                    console.log("doei");
+                    $("div.textDiv").text("<p>This is a test that failed.</p>");
                 }
-
             }
         });
 
