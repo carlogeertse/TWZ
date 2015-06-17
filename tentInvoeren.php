@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
 
-<body style = "background-image: url(download.jpg); position: relative; background-size: cover;>
+<body style = "background-image: url(download.jpg); position: relative; background-size: cover;">
+<style type = "text/css">
+    #spaceUnder > td {
+        padding-bottom: 1em;
+    }
+</style>
 <?php
 include("Menu.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -33,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ?>
     <form action="tentInvoeren.php" method="POST">
         <table>
-            <tr>
+            <tr id = "spaceUnder">
                 <td>
                     Academie:
                 </td>
@@ -48,31 +53,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </select>
                 </td>
             </tr>
-            <tr>
+            <tr id = "spaceUnder">
                 <td>
-                    Datum: (format dd-mm-jjjj)
+                    Datum:
                 </td>
                 <td>
                     <input type = "date" name = "datum">
                 </td>
             </tr>
-            <tr>
+            <tr id = "spaceUnder">
                 <td>
-                    Begintijd: (format hh:mm)
+                    Begintijd:
                 </td>
                 <td>
                     <input type="time" name="begintijd">
                 </td>
             </tr>
-            <tr>
+            <tr id = "spaceUnder">
                 <td>
-                    Eindtijd: (format hh:mm)
+                    Eindtijd:
                 </td>
                 <td>
                     <input type="time" name="eindtijd">
                 </td>
             </tr>
-            <tr>
+            <tr id = "spaceUnder">
                 <td>
                     Lokaal:
                 </td>
@@ -80,12 +85,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="text" name="lokaal">
                 </td>
             </tr>
-            <tr>
+            <tr id = "spaceUnder">
                 <td>
                     Omschrijving:
                 </td>
                 <td>
                     <input type="text" name="omschrijving">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type = "submit" value = "Submit">
                 </td>
             </tr>
         </table>

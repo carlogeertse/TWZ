@@ -8,7 +8,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     </head>
 
-    <body style = "background-image: url(download.jpg); position: relative; background-size: cover;>
+    <body style = "background-image: url(download.jpg); position: relative; background-size: cover;">
+        <style type = "text/css">
+            #spaceUnder > td {
+                padding-bottom: 1em;
+            }
+        </style>
         <?php
             include("Menu.php");
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,7 +37,7 @@
         </h1>
         <table>
             <form method="post" action="survInvoeren.php">
-                <tr>
+                <tr id = "spaceUnder">
                     <td>
                         Voornaam:
                     </td>
@@ -40,7 +45,7 @@
                         <input type="text" name="Voornaam" required>
                     </td>
                 </tr>
-                <tr>
+                <tr id = "spaceUnder">
                     <td>
                         Achternaam:
                     </td>
@@ -48,7 +53,7 @@
                         <input type="text" name="Achternaam" required>
                     </td>
                 </tr>
-                <tr>
+                <tr id = "spaceUnder">
                     <td>
                         Adres:
                     </td>
@@ -56,7 +61,7 @@
                         <input type="text" name="Adres" required>
                     </td>
                 </tr>
-                <tr>
+                <tr id = "spaceUnder">
                     <td>
                         Postcode:
                     </td>
@@ -64,7 +69,7 @@
                         <input type="text" name="Postcode" required>
                     </td>
                 </tr>
-                <tr>
+                <tr id = "spaceUnder">
                     <td>
                         Rekeningnummer:
                     </td>
@@ -72,7 +77,7 @@
                         <input type="text" name="Rekeningnummer" required>
                     </td>
                 </tr>
-                <tr>
+                <tr id = "spaceUnder">
                     <td>
                         Telefoonnummer:
                     </td>
@@ -80,7 +85,7 @@
                         <input type="text" name="Telefoonnummer" pattern="\d+" required>
                     </td>
                 </tr>
-                <tr>
+                <tr id = "spaceUnder">
                     <td>
                         E-mailadres:
                     </td>

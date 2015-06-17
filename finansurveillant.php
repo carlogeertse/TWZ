@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
 
-<body>
+<body style = "background-image: url(download.jpg); position: relative; background-size: cover;">
 <?php include("Menu.php"); ?>
 <h1>
     tentamens met surveillanten per academie:
