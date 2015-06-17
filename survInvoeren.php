@@ -18,12 +18,9 @@
             include("Menu.php");
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                $sql = "INSERT INTO surveillanten(Voornaam, Achternaam, adres, postcode, rekening_nummer, telefoon, email)
+                $sql = "INSERT INTO surveillanten(Voornaam, Achternaam, telefoon, email)
                             VALUES('" . $_POST['Voornaam'] . "',
                         '" . $_POST['Achternaam'] . "',
-                        '" . $_POST['Adres'] . "',
-                        '" . $_POST['Postcode'] . "',
-                        '" . $_POST['Rekeningnummer'] . "',
                         '" . $_POST['Telefoonnummer'] . "',
                         '" . $_POST['E-mailadres'] . "');";
 
@@ -51,30 +48,6 @@
                     </td>
                     <td>
                         <input type="text" name="Achternaam" required>
-                    </td>
-                </tr>
-                <tr id = "spaceUnder">
-                    <td>
-                        Adres:
-                    </td>
-                    <td>
-                        <input type="text" name="Adres" required>
-                    </td>
-                </tr>
-                <tr id = "spaceUnder">
-                    <td>
-                        Postcode:
-                    </td>
-                    <td>
-                        <input type="text" name="Postcode" required>
-                    </td>
-                </tr>
-                <tr id = "spaceUnder">
-                    <td>
-                        Rekeningnummer:
-                    </td>
-                    <td>
-                        <input type="text" name="Rekeningnummer" required>
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
