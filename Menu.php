@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-            FUCK DEZE OPDRACHT!
+
         </title>
         <meta charset = "UTF-8">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -15,14 +15,15 @@
 
             #header {
                 background-color: #91eeff;
+                background-size: cover;
             }
         </style>
     </head>
 
     <body>
-        <div id = "header" class = "bs-example">
+        <div class = "bs-example">
             <nav id = "myNavbar" class = "navbar navbar-default" role = "navigation">
-                <div class = "container">
+                <div id = "header" class = "container">
                     <div class = "navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
@@ -55,12 +56,6 @@
                                     <li>
                                         <a href = "survRooster.php">
                                             Rooster Surveillanten
-                                        </a>
-                                    </li>
-                                    <li class = "divider" />
-                                    <li>
-                                        <a href = "#">
-                                            Trash
                                         </a>
                                     </li>
                                 </ul>
