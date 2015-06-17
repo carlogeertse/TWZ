@@ -2,6 +2,8 @@
 <?php include ("connectDB.php"); ?>
 <html>
 <head>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/checkboxScript.js"></script>
     <title>
         Beschikbaarheid
     </title>
@@ -21,7 +23,7 @@
 $weekarray = explode("-W", $_POST['week']);
 $week = $weekarray[1];
 $jaar = $weekarray[0];
-$sql = "SELECT Voornaam, Achternaam
+$sql = "SELECT Voornaam, Achternaam, pers_nummer
         FROM surveillanten";
 $result = $conn->query($sql);
 ?>
@@ -44,22 +46,22 @@ $result = $conn->query($sql);
         {
             echo "<tr><td>".$row['Voornaam']." ".$row['Achternaam']."</td>";
             echo "<td> Ochtend </td>";
-            for($i=0; $i<5; $i++)
+            for($day=1; $day<=5; $day++)
             {
-                echo '<td><input type="checkbox" name="'.$row['Voornaam'].' '.$row['Achternaam'].$i.'o"></td>';
+                echo '<td><input type="checkbox" name='.date('m/d/Y', strtotime($jaar."W".$week.$day)).' value="ochtend"'.$row['pers_nummer'].'></td>';
             }
             //Begin op een nieuwe regel
             echo "</tr><tr><td></td>";
             echo "<td> Middag </td>";
-            for($i=0; $i<5; $i++)
+            for($day=1; $day<=5; $day++)
             {
-                echo '<td><input type="checkbox" name="'.$row['Voornaam'].' '.$row['Achternaam'].$i.'m"></td>';
+                echo '<td><input type="checkbox" name='.date('m/d/Y', strtotime($jaar."W".$week.$day)).' value="middag"'.$row['pers_nummer'].'></td>';
             }
             echo "</tr><tr><td></td>";
             echo "<td> Avond </td>";
-            for($i=0; $i<5; $i++)
+            for($day=1; $day<=5; $day++)
             {
-                echo '<td><input type="checkbox" name="'.$row['Voornaam'].' '.$row['Achternaam'].$i.'a"></td>';
+                echo '<td><input type="checkbox" name='.date('m/d/Y', strtotime($jaar."W".$week.$day)).' value="avond'.$row['pers_nummer'].'"></td>';
             }
             echo "</tr>";
         }
