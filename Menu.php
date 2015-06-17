@@ -11,11 +11,17 @@
         <style type = "text/css">
 
             #Home {
+                font-size: 15px;
+                width: 100px;
                 background: #FF9000;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-top-right-radius: 5px;
+                border-bottom-left-radius: 5px;
             }
 
             #Home a:hover {
-                background: #FF9000;
+                background: #FFFFFF;
             }
 
             .container {
@@ -64,14 +70,14 @@
             }
 
             ul li ul li {
-                width: 200px;
+                width: 250px;
             }
 
             #header {
                 background-color: #00344C;
-                -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.49);
-                -moz-box-shadow:    0px 3px 5px rgba(100, 100, 100, 0.49);
-                box-shadow:         0px 3px 5px rgba(100, 100, 100, 0.49);
+                -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.49);
+                -moz-box-shadow:    0px 3px 5px rgba(0, 0, 0, 0.49);
+                box-shadow:         0px 3px 5px rgba(0, 0, 0, 0.49);
             }
         </style>
     </head>
@@ -92,15 +98,15 @@
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <img src = "logo.png" style = "z-index: 1; border-color: #00344C; background-color: #00344C; display: block; margin-left: auto; margin-right: auto; height: 100px;">
+                    <img src = "ssc/logo.png" style = "z-index: 1; border-color: #00344C; background-color: #00344C; display: block; margin-left: auto; margin-right: auto; height: 100px;">
                     <ul class="nav nav-tabs">
-                        <li id = "Home" class = "active">
+                        <li id = "Home">
                             <a href = "index.php">
                                 Home
                             </a>
                         </li>
                         <li class = "dropdown">
-                            <a href = "#" data-toggle = "dropdown" class = "dropdown-toggle">
+                            <a href = "#" style = "left: 1px;" data-toggle = "dropdown" class = "dropdown-toggle">
                                 Surveillanten
                                 <b class = "caret">
 
@@ -120,6 +126,26 @@
                                 <li>
                                     <a href = "survRooster.php">
                                         Rooster surveillanten
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a href = "#" data-toggle = "dropdown" class = "dropdown-toggle">
+                                Tentamen
+                                <b class = "caret">
+
+                                </b>
+                            </a>
+                            <ul class = "dropdown-menu">
+                                <li>
+                                    <a href = "tentInvoeren.php">
+                                        Toevoegen tentamen
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href = "tentRooster.php.php">
+                                        Rooster tentamen
                                     </a>
                                 </li>
                             </ul>
