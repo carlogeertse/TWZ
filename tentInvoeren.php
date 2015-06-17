@@ -26,49 +26,69 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <h1>
         Invoeren tentamens
     </h1>
-
-    <h3>
-        Invoeren van tentamens op het rooster. Hier worden alle tentamens ingeroosterd.
-    </h3>
     <?php
     $sql = "SELECT *
             FROM academie";
     $academies = $conn->query($sql);
     ?>
     <form action="tentInvoeren.php" method="POST">
-        <br>
-        Academie:
-        <br>
-        <select name="academie">
-            <?php if ($academies->num_rows > 0) {
-                while ($row = $academies->fetch_assoc()) {
-                    echo '<option value=' . $row['academie_ID'] . '>' . $row['naam'] . '</option>';
-                }
-            }
-            ?>
-        </select>
-        <br>
-        Datum: (format dd-mm-jjjj)
-        <br>
-        <input type="date" name="datum">
-        <br>
-        Begintijd: (format hh:mm)
-        <br>
-        <input type="time" name="begintijd">
-        <br>
-        Eindtijd: (format hh:mm)
-        <br>
-        <input type="time" name="eindtijd">
-        <br>
-        Lokaal:
-        <br>
-        <input type="text" name="lokaal">
-        <br>
-        omschrijving:
-        <br>
-        <input type="text" name="omschrijving">
-        <br>
-        <input type="submit" value="Submit">
+        <table>
+            <tr>
+                <td>
+                    Academie:
+                </td>
+                <td>
+                    <select name="academie">
+                        <?php if ($academies->num_rows > 0) {
+                            while ($row = $academies->fetch_assoc()) {
+                                echo '<option value=' . $row['academie_ID'] . '>' . $row['naam'] . '</option>';
+                            }
+                        }
+                        ?>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Datum: (format dd-mm-jjjj)
+                </td>
+                <td>
+                    <input type = "date" name = "datum">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Begintijd: (format hh:mm)
+                </td>
+                <td>
+                    <input type="time" name="begintijd">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Eindtijd: (format hh:mm)
+                </td>
+                <td>
+                    <input type="time" name="eindtijd">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Lokaal:
+                </td>
+                <td>
+                    <input type="text" name="lokaal">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Omschrijving:
+                </td>
+                <td>
+                    <input type="text" name="omschrijving">
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>

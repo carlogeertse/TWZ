@@ -107,7 +107,7 @@
                             </a>
                         </li>
                         <li class = "dropdown">
-                            <a href = "#" style = "left: 1px;" data-toggle = "dropdown" class = "dropdown-toggle">
+                            <a href = "#" style = "left: 2px;" data-toggle = "dropdown" class = "dropdown-toggle">
                                 Surveillanten
                                 <b class = "caret">
 
@@ -125,19 +125,19 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href = "survRooster.php">
+
                                         Rooster surveillanten
-                                    </a>
+
                                 </li>
                                 <li>
-                                    <a href = "beschikInvoeren.php">
+
                                         Beschikbaarheid surveillant
-                                    </a>
+
                                 </li>
                             </ul>
                         </li>
                         <li class = "dropdown">
-                            <a href = "#" data-toggle = "dropdown" class = "dropdown-toggle">
+                            <a href = "#" style = "left: 2px;" data-toggle = "dropdown" class = "dropdown-toggle">
                                 Tentamen
                                 <b class = "caret">
 
@@ -150,14 +150,14 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href = "tentRooster.php.php">
+
                                         Rooster tentamen
-                                    </a>
+
                                 </li>
                             </ul>
                         </li>
                         <li class = "dropdown">
-                            <a href = "#" data-toggle = "dropdown" class = "dropdown-toggle">
+                            <a href = "#" style = "left: 2px;" data-toggle = "dropdown" class = "dropdown-toggle">
                                 Rooster
                                 <b class = "caret">
 
@@ -165,8 +165,28 @@
                             </a>
                             <ul class = "dropdown-menu">
                                 <li>
-                                    <a href = "Rooster.php">
+
                                         Opstellen rooster
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a style = "left: 2px; width: 210px;" href = "#" data-toggle = "dropdown" class = dropdown-toggle"">
+                                Financi&eumlle gegevens
+                                <b class = "caret">
+
+                                </b>
+                            </a>
+                            <ul class = "dropdown-menu">
+                                <li>
+
+                                        Per academie
+
+                                </li>
+                                <li>
+                                    <a href = "finansurveillant.php">
+                                        Per surveillant
                                     </a>
                                 </li>
                             </ul>
