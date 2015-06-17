@@ -12,10 +12,8 @@ $(document).ready(function(){
             success: function(result){
                 if(result == 'success') {
                     console.log("hoi");
-                    $("div.textDiv").text("<p>This is a test.</p>");
                 } else {
                     console.log("doei");
-                    $("div.textDiv").text("<p>This is a test that failed.</p>");
                 }
             }
         });
