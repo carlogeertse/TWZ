@@ -17,13 +17,14 @@
         </h1>
         <br />
         <h3>
-            Selecteer hier uw academie om uw tentamens te kunnen bekijken:
+            Selecteer hier de week om uw tentamens te kunnen bekijken:
         </h3>
 
-        <select>
-            <option value = "01">-Selecteer uw academie-</option>
-            <option value = "02"></option>
-        </select>
+        <form action="tentamenrooster.php" method="POST">
+            Selecteer een week:
+            <input type="week" name="week">
+            <input type="submit">
+        </form>
     </body>
 </html>
 
