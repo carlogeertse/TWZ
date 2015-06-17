@@ -15,9 +15,7 @@
                 width: 100px;
                 background: #FF9000;
                 border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
                 border-top-right-radius: 5px;
-                border-bottom-left-radius: 5px;
             }
 
             #Home a:hover {
@@ -99,7 +97,7 @@
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <img src = "ssc/logo.png" style = "z-index: 1; border-color: #00344C; background-color: #00344C; display: block; margin-left: auto; margin-right: auto; height: 100px;">
+                    <img src = "ssc/logo2.png" style = "z-index: 1; border-color: #00344C; background-color: #00344C; display: block; margin-left: auto; margin-right: auto; height: 100px;">
                     <ul class="nav nav-tabs">
                         <li id = "Home">
                             <a href = "index.php">
@@ -150,9 +148,9 @@
                                     </a>
                                 </li>
                                 <li>
-
+                                    <a href = "tentRooster.php">
                                         Rooster tentamen
-
+                                    </a>
                                 </li>
                             </ul>
                         </li>
