@@ -7,18 +7,16 @@
         <title>
             Verwijderen surveillant
         </title>
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <script src="js/jquery-2.1.4.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     </head>
 
-    <body style = "background-image: url(download.jpg); position: relative; background-size: cover;">
+    <body style = "background-image: url(download.jpg); position: relative; background-size: cover;>
         <?php include ("Menu.php"); ?>
 
-        <h1 align = "center">
-            Kies welke surveillant u wilt verwijderen
+        <h1>
+            Welke Surveillant wilt u verwijderen?
         </h1>
+
         <?php
             if($_SERVER["REQUEST_METHOD"] == "POST") {
                 $sqlDelete = "DELETE FROM surveillanten WHERE pers_nummer = '" . $_POST['surveillanten'] . "';";

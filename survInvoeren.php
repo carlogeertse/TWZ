@@ -5,10 +5,7 @@
         <title>
             Rooster van de surveillanten
         </title>
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <script src="js/jquery-2.1.4.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     </head>
 
     <body style = "background-image: url(download.jpg); position: relative; background-size: cover;">
@@ -32,7 +29,7 @@
                 echo "<h3>Surveillant toegevoegd!</h3>";
             }
         ?>
-        <h1 align = "center">
+        <h1>
             Invoeren surveillanten
         </h1>
         <table>
