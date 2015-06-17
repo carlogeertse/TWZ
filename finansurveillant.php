@@ -16,7 +16,7 @@
 </style>
 <?php include("Menu.php"); ?>
 <h1>
-    tentamens met surveillanten per academie:
+    Tentamens met surveillanten per academie:
 </h1>
     <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
