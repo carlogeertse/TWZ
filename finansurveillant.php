@@ -5,7 +5,10 @@
     <title>
         Rooster
     </title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body style = "background-image: url(download.jpg); position: relative; background-size: cover;">
@@ -15,7 +18,7 @@
     }
 </style>
 <?php include("Menu.php"); ?>
-<h1>
+<h1 align = "center">
     Tentamens met surveillanten per academie:
 </h1>
     <?php
