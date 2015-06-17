@@ -9,22 +9,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <style type = "text/css">
-            body {
-                margin: 0;
-                background-image: url ('background.jpg');
-                background-size: 1920px 1080px;
-                background-repeat: no-repeat;
-                display: compact;
-            }
             .bs-example {
                 margin: 20px;
+            }
+
+            #header {
+                background-color: #91eeff;
             }
         </style>
     </head>
 
     <body>
-        <div class = "bs-example">
-            <nav id = "myNavbar"class = "navbar navbar-default" role = "navigation">
+        <div id = "header" class = "bs-example">
+            <nav id = "myNavbar" class = "navbar navbar-default" role = "navigation">
                 <div class = "container">
                     <div class = "navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
