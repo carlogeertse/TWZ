@@ -71,6 +71,7 @@
 
             ul li ul li {
                 width: 250px;
+                color: #000000;
             }
 
             #header {
@@ -128,6 +129,11 @@
                                         Rooster surveillanten
                                     </a>
                                 </li>
+                                <li>
+                                    <a href = "beschikInvoeren.php">
+                                        Beschikbaarheid surveillant
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li class = "dropdown">
@@ -146,6 +152,21 @@
                                 <li>
                                     <a href = "tentRooster.php.php">
                                         Rooster tentamen
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a href = "#" data-toggle = "dropdown" class = "dropdown-toggle">
+                                Rooster
+                                <b class = "caret">
+
+                                </b>
+                            </a>
+                            <ul class = "dropdown-menu">
+                                <li>
+                                    <a href = "Rooster.php">
+                                        Opstellen rooster
                                     </a>
                                 </li>
                             </ul>
