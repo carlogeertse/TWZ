@@ -14,10 +14,47 @@
                 width: 100%;
             }
 
-            a {
+            ul {
+                padding: none;
+                list-style: none;
+            }
+
+            ul li{
+                width: 150px;
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                line-height: 21px;
+            }
+
+            ul li a{
+                display: block;
+                padding: 5px 10px;
+                color: #000000;
+                background: #f2f2f2;
+                text-decoration: none;
                 font-family: "Arial Black", Gadget, sans-serif;
             }
 
+            ul li ul{
+                display: none;
+                position: absolute;
+                z-index: 999;
+                left: 0;
+            }
+
+            ul li a:hover{
+                color: #000000;
+                background: #939393;
+            }
+
+            ul li:hover ul{
+                display: block; /* display the dropdown */
+            }
+
+            ul li ul li {
+                width: 200px;
+            }
         </style>
     </head>
 
@@ -25,9 +62,6 @@
     <!-- Navigation -->
     <nav style = "position: relative;" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <a href = "index.php">
-            <img style = "z-index: -1; top: 10px; float: left;" src="logo.png">
-            </a>
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
