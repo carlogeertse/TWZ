@@ -18,7 +18,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sqli = "INSERT INTO tentamen(academie_ID, datum, begin_tijd, eind_tijd, lokaal, omschrijving)
                                      VALUES (?,?,?,?,?,?)";
-        $stnt = $conn->prepare($sqli);
+        $stmt = $conn->prepare($sqli);
         $academie = $_POST['academie'];
         $datum = $_POST['datum'];
         $begintijd = $_POST['begintijd'];
@@ -60,7 +60,7 @@
                         Datum:
                     </td>
                     <td>
-
+                        <input type="date" name="datum">
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
