@@ -25,7 +25,7 @@
                         '" . $_POST['Telefoonnummer'] . "',
                         '" . $_POST['E-mailadres'] . "');";
 
-                $conn->query($sql);
+                $st$conn->prepare($sql);
                 echo $conn->connect_error;
                 echo "<h3>Surveillant toegevoegd!</h3>";
             }
