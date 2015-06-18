@@ -130,9 +130,9 @@
 
                                 </li>
                                 <li>
-
+                                    <a href = "beschikInvoeren.php">
                                         Beschikbaarheid surveillant
-
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -181,12 +181,12 @@
                             <ul class = "dropdown-menu">
                                 <li>
                                     <a href = "finansurveillant.php">
-                                        Per surveillant
+                                        Per academie
                                     </a>
                                 </li>
                                 <li>
 
-                                        Per academie
+                                        Per surveillant
 
                                 </li>
                             </ul>

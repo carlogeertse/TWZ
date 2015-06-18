@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 
-<body>
+<body style = "background-image: url(src/download.jpg); position: relative; background-size: cover;">
 <?php include("Menu.php"); ?>
 
 <h1>

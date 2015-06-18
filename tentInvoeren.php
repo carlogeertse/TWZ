@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <?php include("connectDB.php"); ?>
-<html lang = "en">
+<html>
     <head>
-        <meta charset="utf-8">
         <title>
             Toevoegen tentamen
         </title>
-        <script>
-            $(function() {
-                $( "#datepicker" ).datepicker();
-            });
-        </script>
     </head>
 
     <body style = "background-image: url(src/download.jpg); position: relative; background-size: cover;">
@@ -63,7 +57,7 @@
                         Datum:
                     </td>
                     <td>
-                        <input type="text" id="datepicker">
+
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
