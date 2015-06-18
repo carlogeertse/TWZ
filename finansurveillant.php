@@ -11,7 +11,7 @@
     <script src="js/bootstrap.min.js"></script>
 </head>
 
-<body style = "background-image: url(download.jpg); position: relative; background-size: cover;">
+<body style = "background-image: url(src/download.jpg); position: relative; background-size: cover;">
 <style type = "text/css">
     #spaceUnder > td {
         padding-bottom: 1em;
