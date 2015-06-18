@@ -8,37 +8,24 @@
         <link rel = "stylesheet" type = "text/css" href = "Style.css">
     </head>
 
-    <body style = "background-image: url(src/download.jpg); position: relative; background-size: cover;>
-        <?php
-            include("Menu.php");
-        ?>
-        <h1>
+    <body style = "background-image: url(src/download.jpg); position: relative; background-size: cover;">
+    <?php include("Menu.php"); ?>
+
+    <h1>
+        <b>
             Tentamenrooster
-        </h1>
-        <h3>
-            Selecteer hier de week om uw tentamens te kunnen bekijken:
-        </h3>
+        </b>
+    </h1>
 
-        <form action="tentamenrooster.php" method="POST">
-            <table>
-                <tr>
-                    <td>
-                        Selecteer een week:
-                    </td>
-                    <td>
-                        <input type="week" name="week">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
+    <h3> Kies een week </h3>
 
-                    </td>
-                    <td>
-                        <input type="submit">
-                    </td>
-                </tr>
-            </table>
-        </form>
+    <form action="tentamenrooster.php" method="POST" div="weekselectform">
+        Selecteer een week:
+        <input type="week" name="week" class="picker">
+        <input type="submit" class="submit"/>
+    </form>
+    <script src="js/legeWeekCheck.js"></script>
+
     </body>
 </html>
 
