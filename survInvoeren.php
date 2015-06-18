@@ -18,14 +18,17 @@
             include("Menu.php");
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                $sql = "INSERT INTO surveillanten(Voornaam, Achternaam, Tussenvoegsel, telefoon, email)
-                            VALUES('" . $_POST['Voornaam'] . "',
-                        '" . $_POST['Tussenvoegsel'] . "',
-                        '" . $_POST['Achternaam'] . "',
-                        '" . $_POST['Telefoonnummer'] . "',
-                        '" . $_POST['E-mailadres'] . "');";
+                $sqli = "INSERT INTO surveillanten(Voornaam, Achternaam, Tussenvoegsel, telefoon, email)
+                            VALUES(?,?,?,?,?)";
+                $stmt = $conn->prepare($sqli);
+                $voornaam = $_POST['Voornaam'];
+                $tussenvoegsel = $_POST['Tussenvoegsel'];
+                $achternaam = $_POST['Achternaam'];
+                $telefoonnummer = $_POST['Telefoonnummer'];
+                $mail = $_POST['E-mailadres'];
 
-                $st$conn->prepare($sql);
+                $stmt->bind_param("sssss", $voornaam, $tussenvoegsel, $achternaam, $telefoonnummer, $mail);
+                $stmt->execute();
                 echo $conn->connect_error;
                 echo "<h3>Surveillant toegevoegd!</h3>";
             }
@@ -64,7 +67,7 @@
                         Telefoonnummer:
                     </td>
                     <td>
-                        <input type="text" name="Telefoonnummer" pattern="\d+" required>
+                        <input type="text" name="Telefoonnummer" pattern="[0-9]{10}" required>
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
