@@ -5,18 +5,12 @@ $(document).ready(function(){
         var attrName = $(this).prop('name');
         var data = {isChecked: checked, id: value, date: attrName};
 
+        console.log(checked);
+
         $.ajax({
             url: "updateBeschikbaarheid.php",
             type: "POST",
-            data: data,
-            success: function(result){
-                if(result == 'success') {
-                    console.log("hoi");
-                } else {
-                    console.log("doei");
-                }
-            }
+            data: data
         });
-
     });
 });

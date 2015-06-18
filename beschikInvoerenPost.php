@@ -28,14 +28,13 @@ $result = $conn->query($sql);
 
 <table>
     <tr>
+        <td>Week <?php echo $week; ?></td>
         <td></td>
-        <td></td>
-        <?php
-        $week_number = 0;
-        for ($day = 1; $day <= 5; $day++) {
-            echo "<td>" . date('d/m/Y', strtotime($jaar . "W" . $week . $day)) . "</td>";
-        }
-        ?>
+        <td>Maandag</td>
+        <td>Dinsdag</td>
+        <td>Woensdag</td>
+        <td>Donderdag</td>
+        <td>Vrijdag</td>
     </tr>
     <?php if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
@@ -60,8 +59,6 @@ $result = $conn->query($sql);
         }
     } ?>
 </table>
-
-<div id="textDiv"></div>
 
 <script src="js/checkboxScript.js"></script>
 
