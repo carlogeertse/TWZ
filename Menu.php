@@ -4,10 +4,10 @@
 
         </title>
         <meta charset = "UTF-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <style type = "text/css">
 
             #Home {
@@ -15,9 +15,7 @@
                 width: 100px;
                 background: #FF9000;
                 border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
                 border-top-right-radius: 5px;
-                border-bottom-left-radius: 5px;
             }
 
             #Home a:hover {
@@ -80,6 +78,8 @@
                 -moz-box-shadow:    0px 3px 5px rgba(0, 0, 0, 0.49);
                 box-shadow:         0px 3px 5px rgba(0, 0, 0, 0.49);
             }
+
+
         </style>
     </head>
 
@@ -99,7 +99,7 @@
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <img src = "ssc/logo.png" style = "z-index: 1; border-color: #00344C; background-color: #00344C; display: block; margin-left: auto; margin-right: auto; height: 100px;">
+                    <img src = "ssc/logo2.png" style = "z-index: 1; border-color: #00344C; background-color: #00344C; display: block; margin-left: auto; margin-right: auto; height: 100px;">
                     <ul class="nav nav-tabs">
                         <li id = "Home">
                             <a href = "index.php">
@@ -107,7 +107,7 @@
                             </a>
                         </li>
                         <li class = "dropdown">
-                            <a href = "#" style = "left: 1px;" data-toggle = "dropdown" class = "dropdown-toggle">
+                            <a href = "#" style = "left: 2px;" data-toggle = "dropdown" class = "dropdown-toggle">
                                 Surveillanten
                                 <b class = "caret">
 
@@ -125,19 +125,19 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href = "survRooster.php">
+
                                         Rooster surveillanten
-                                    </a>
+
                                 </li>
                                 <li>
-                                    <a href = "beschikInvoeren.php">
+
                                         Beschikbaarheid surveillant
-                                    </a>
+
                                 </li>
                             </ul>
                         </li>
                         <li class = "dropdown">
-                            <a href = "#" data-toggle = "dropdown" class = "dropdown-toggle">
+                            <a href = "#" style = "left: 2px;" data-toggle = "dropdown" class = "dropdown-toggle">
                                 Tentamen
                                 <b class = "caret">
 
@@ -150,14 +150,14 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href = "tentRooster.php.php">
+                                    <a href = "tentRooster.php">
                                         Rooster tentamen
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class = "dropdown">
-                            <a href = "#" data-toggle = "dropdown" class = "dropdown-toggle">
+                            <a href = "#" style = "left: 2px;" data-toggle = "dropdown" class = "dropdown-toggle">
                                 Rooster
                                 <b class = "caret">
 
@@ -165,8 +165,28 @@
                             </a>
                             <ul class = "dropdown-menu">
                                 <li>
-                                    <a href = "Rooster.php">
+
                                         Opstellen rooster
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a style = "left: 2px; width: 210px;" href = "#" data-toggle = "dropdown" class = dropdown-toggle"">
+                                Financi&eumlle gegevens
+                                <b class = "caret">
+
+                                </b>
+                            </a>
+                            <ul class = "dropdown-menu">
+                                <li>
+
+                                        Per academie
+
+                                </li>
+                                <li>
+                                    <a href = "finansurveillant.php">
+                                        Per surveillant
                                     </a>
                                 </li>
                             </ul>
