@@ -18,7 +18,7 @@
             include("Menu.php");
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                $sql = "INSERT INTO surveillanten(Voornaam, Tussenvoegsel, Achternaam, telefoon, email)
+                $sql = "INSERT INTO surveillanten(Voornaam, Achternaam, Tussenvoegsel, telefoon, email)
                             VALUES('" . $_POST['Voornaam'] . "',
                         '" . $_POST['Tussenvoegsel'] . "',
                         '" . $_POST['Achternaam'] . "',

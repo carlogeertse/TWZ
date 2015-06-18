@@ -19,6 +19,8 @@
 
         <?php
             if($_SERVER["REQUEST_METHOD"] == "POST") {
+                $sql = "DELETE FROM beschikbaarheid WHERE pers_nummer = '" . $_POST['surveillanten'] . "';";
+                $sql = $conn->query($sql);
                 $sqlDelete = "DELETE FROM surveillanten WHERE pers_nummer = '" . $_POST['surveillanten'] . "';";
                 $sqlDelete = $conn->query($sqlDelete);
             }
