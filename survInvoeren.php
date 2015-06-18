@@ -18,8 +18,9 @@
             include("Menu.php");
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                $sql = "INSERT INTO surveillanten(Voornaam, Achternaam, telefoon, email)
+                $sql = "INSERT INTO surveillanten(Voornaam, Achternaam, Tussenvoegsel, telefoon, email)
                             VALUES('" . $_POST['Voornaam'] . "',
+                        '" . $_POST['Tussenvoegsel'] . "',
                         '" . $_POST['Achternaam'] . "',
                         '" . $_POST['Telefoonnummer'] . "',
                         '" . $_POST['E-mailadres'] . "');";
@@ -40,6 +41,14 @@
                     </td>
                     <td>
                         <input type="text" name="Voornaam" required>
+                    </td>
+                </tr>
+                <tr id = "spaceUnder">
+                    <td>
+                        Tussenvoegsel:
+                    </td>
+                    <td>
+                        <input type="text" name="Tussenvoegsel">
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
