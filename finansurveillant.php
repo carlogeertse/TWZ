@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     Academie:
                 </td>
                 <td>
-                    <select name="academie">
+                    <select style = "height: 25px;" name="academie">
                         <?php if ($academies->num_rows > 0) {
                             while ($row = $academies->fetch_assoc()) {
                                 echo '<option value=' . $row['academie_ID'] . '>' . $row['naam'] . '</option>';
@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     Begin datum:
                 </td>
                 <td>
-                    <input type="date" name="begin">
+                    <input style = "height: 25px;" type="date" name="begin">
                 </td>
             </tr>
             <tr id = "spaceUnder">
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     Eind datum:
                 </td>
                 <td>
-                    <input type="date" name="eind">
+                    <input style = "height: 25px;" type="date" name="eind">
                 </td>
             </tr>
             <tr id = "spaceUnder">

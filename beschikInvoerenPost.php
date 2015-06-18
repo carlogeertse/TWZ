@@ -21,25 +21,26 @@
 $weekarray = explode("-W", $_POST['week']);
 $week = $weekarray[1];
 $jaar = $weekarray[0];
-$sql = "SELECT Voornaam, Achternaam, pers_nummer
-        FROM surveillanten";
+$sql = "SELECT Voornaam, Tussenvoegsel, Achternaam, pers_nummer
+        FROM surveillanten
+        ORDER BY Achternaam ASC";
 $result = $conn->query($sql);
 ?>
 
-<table>
+<table border = "1" style = "margin-left: auto; margin-right: auto;">
     <tr>
-        <td>Week <?php echo $week; ?></td>
+        <td style = "text-align: center;"><b>Week <?php echo $week; ?></b></td>
         <td></td>
-        <td>Maandag</td>
-        <td>Dinsdag</td>
-        <td>Woensdag</td>
-        <td>Donderdag</td>
-        <td>Vrijdag</td>
+        <td style = "text-align: center;">Maandag</td>
+        <td style = "text-align: center;">Dinsdag</td>
+        <td style = "text-align: center;">Woensdag</td>
+        <td style = "text-align: center;">Donderdag</td>
+        <td style = "text-align: center;">Vrijdag</td>
     </tr>
     <?php if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            echo "<tr><td>" . $row['Voornaam'] . " " . $row['Achternaam'] . "</td>";
-            echo "<td> Ochtend </td>";
+            echo "<tr><td style = 'width: 25%; text-align: center;'>" . $row['Achternaam'] . " " . $row['Tussenvoegsel'] . ", " . $row['Voornaam'] . "</td>";
+            echo "<td style = 'width: 20%; text-align: center;'> Ochtend </td>";
             for ($day = 1; $day <= 5; $day++) {
                 $dagdeel = 'ochtend';
                 $date = date('Y-m-d', strtotime($jaar . "W" . $week . $day));
@@ -48,7 +49,7 @@ $result = $conn->query($sql);
             }
             //Begin op een nieuwe regel
             echo "</tr><tr><td></td>";
-            echo "<td> Middag </td>";
+            echo "<td style = 'width: 20%; text-align: center;'> Middag </td>";
             for ($day = 1; $day <= 5; $day++) {
                 $dagdeel = 'middag';
                 $date = date('Y-m-d', strtotime($jaar . "W" . $week . $day));
@@ -57,7 +58,7 @@ $result = $conn->query($sql);
             }
             //Begin op een nieuwe regel
             echo "</tr><tr><td></td>";
-            echo "<td> Avond </td>";
+            echo "<td style = 'width: 20%; text-align: center;'> Avond </td>";
             for ($day = 1; $day <= 5; $day++) {
                 $dagdeel = 'avond';
                 $date = date('Y-m-d', strtotime($jaar . "W" . $week . $day));
@@ -74,10 +75,10 @@ $result = $conn->query($sql);
     function generateBoxes($date,$row,$dagdeel,$checked)
     {
         if($checked) {
-            echo '<td><input type="checkbox" name=' . $date . ' value=' . $dagdeel . '-' . $row['pers_nummer'] . '" checked></td>';
+            echo '<td style = "width: 10%; text-align: center;"><input type="checkbox" name=' . $date . ' value=' . $dagdeel . '-' . $row['pers_nummer'] . '" checked></td>';
         }
         else {
-            echo '<td><input type="checkbox" name=' . $date . ' value=' . $dagdeel . '-' . $row['pers_nummer'] . '"></td>';
+            echo '<td style = "width: 10%; text-align: center;"><input type="checkbox" name=' . $date . ' value=' . $dagdeel . '-' . $row['pers_nummer'] . '"></td>';
         }
     }
 
