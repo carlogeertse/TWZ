@@ -17,16 +17,13 @@
     include("Menu.php");
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sqli = "INSERT INTO tentamen(academie_ID, datum, begin_tijd, eind_tijd, lokaal, omschrijving)
-                                     VALUES (?,?,?,?,?,?)";
-        $stnt = $conn->prepare($sqli);
-        $academie = $_POST['academie'];
-        $datum = $_POST['datum'];
-        $begintijd = $_POST['begintijd'];
-        $eindtijd = $_POST['eindtijd'];
-        $lokaal = $_POST['lokaal'];
-        $omschrijving = $_POST['omschrijving'];
-        $stmt->bind_param("ssssss", $academie, $datum, $begintijd, $eindtijd, $lokaal, $omschrijving);
-        $stmt->execute();
+                                     VALUES ('" . $_POST['academie'] . "',
+                                             '" . $_POST['datum'] . "',
+                                             '" . $_POST['begintijd'] . "',
+                                             '" . $_POST['eindtijd'] . "',
+                                             '" . $_POST['lokaal'] . "',
+                                             '" . $_POST['omschrijving'] . "');";
+        $conn->query($sqli);
         echo "<h2>Tentamen toegevoegd!</h2>";
     }
         ?>
