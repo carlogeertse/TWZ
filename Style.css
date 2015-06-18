@@ -1,0 +1,87 @@
+body {
+    background-color: lightblue;
+}
+
+h1{
+    text-align: center;
+}
+
+.inner{
+    margin :0 auto;
+    width:800px;
+}
+.menu{
+    float:left;
+    width:100%;
+
+}
+.menu ul {
+    background: #0000ff;
+    float:left;
+    opacity:0.5;
+    width:825px;
+    border-radius:30px;
+    margin-top:1px;
+    margin:0;}
+
+.menu ul li {
+    text-align: left;
+    float: left;
+    display: inline;
+    position:relative;
+    padding: 17px 20px;
+}
+.menu ul li a
+{
+    color:#FFF;
+    text-decoration:none;
+}
+.menu ul li a:hover
+{
+    color: #000000; background-color: #FFFFFF;
+
+}
+
+.menu ul ul {
+    display: none;
+    position: absolute;
+    left: 0px;
+    width: 200px;
+    background: none repeat scroll 0% 0% #0000ff;
+    border: 0px none;
+    border-radius: 0px;
+    top: 54px;
+    opacity: 100%;
+
+}
+.menu  ul ul li {padding:6px 10px; text-align: left;}
+.menu  ul ul li a {color:#FFFFFF;}
+.menu  ul ul li a:hover {color:#000000; background-color: #FFFFFF;}
+.menu  ul li:hover ul{display:inherit;}
+.search{
+    float:left;
+    width:150px;
+}
+.search input[type="text"] {
+    float: left;
+    margin-left: 156px;
+    font-size:15px;
+    margin-top: 11px;
+    width: 158px;
+    height: 32px;
+    border: 1px solid #ECEBEB;
+    border-radius: 5px 0px 0px 5px;
+}
+.search input[type="submit"] {
+    margin-top: -36px;
+
+    margin-left: 318px;
+    background: none repeat scroll 0% 0% #FEA304;
+    color: #FFF;
+    font-size: 15px;
+    width: 109px;
+    height: 36px;
+    border: 1px solid #FEA304;
+    border-radius: 0px 5px 5px 0px;
+    float: left;
+}
