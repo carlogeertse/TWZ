@@ -16,23 +16,23 @@
             Kies een surveillant om te bewerken:
         </h1>
 
-    <?php
-        $sqlSurv = "SELECT Tussenvoegsel, Achternaam, Voornaam, pers_nummer
-                    FROM surveillanten
-                    ORDER BY Achternaam;";
-        $sqlSurv = $conn->query($sqlSurv);
-    ?>
-        <form method = "post" action = "">
-            <select name = "surveillanten">
+
+        <form method = "post" action = "bewerkenSurveillant.php">
+            <select name = "pers_nummer">
                 <?php
-                    if ($sqlSurv-> num_rows > 0) {
-                        while ($row = $sqlSurv->fetch_assoc()) {
-                            echo "<option value = " . $row['pers_nummer'] . ">" . $row['Tussenvoegsel'] . " " . $row['Achternaam'] . ", " . $row['Voornaam'] . "</option>";
+                    $sqlSurv = "SELECT Tussenvoegsel, Achternaam, Voornaam, telefoon, email, pers_nummer
+                                FROM surveillanten
+                                ORDER BY Achternaam;";
+                    $result = $conn->query($sqlSurv);
+                    if ($result-> num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<option value = " . $row['pers_nummer'] . ">" . $row['Tussenvoegsel'] . " " . $row['Achternaam'] . ", " . $row['Voornaam'] ." </option>";
                         }
                     }
                 ?>
-                <input type = "submit" value = "Bewerk surveillant">
             </select>
+                <input type = "submit" value = "Bewerk surveillant">
         </form>
+
     </body>
 </html>
