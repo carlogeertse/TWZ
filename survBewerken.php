@@ -22,6 +22,7 @@ if (isset($_POST['pers_nummer'])) {
         while ($row = $result->fetch_assoc()) {
 
             ?>
+
             <form method="post">
                 <table>
                     <tr id="spaceUnder">
@@ -41,6 +42,7 @@ if (isset($_POST['pers_nummer'])) {
                     </tr>
                     <tr>
                         <td>
+                            <?php echo" <input type='hidden' value='".$_POST['pers_nummer']."'  name='pers_nummerN'>"?>
                             <input type="submit" value="Bijwerken"/>
                         </td>
                     </tr>
@@ -51,9 +53,25 @@ if (isset($_POST['pers_nummer'])) {
     }
 }
 
-elseif(isset($_POST['whatevertheaanpasformuliergivesu']))
-{
-//de update statement
+elseif(isset($_POST['voornaam'])){
+    $sqli = "UPDATE surveillanten
+                SET Voornaam = ?,
+                    Tussenvoegsel = ?,
+                    Achternaam = ?,
+                    telefoon= ?,
+                    email = ?
+                WHERE pers_nummer = ?";
+    $stmt = $conn->prepare($sqli);
+    $voornaam = $_POST['voornaam'];
+    $tussenvoegsel = $_POST['tussenvoegsel'];
+    $achternaam = $_POST['achternaam'];
+    $telefoonnummer = $_POST['telefoon'];
+    $mail = $_POST['email'];
+    $nummer = $_POST['pers_nummerN'];
+    $stmt->bind_param("sssssd", $voornaam, $tussenvoegsel, $achternaam, $telefoonnummer, $mail,$nummer);
+    $stmt->execute();
+    echo"succesvol bewerkt";
+
 }
 else {
 ?>

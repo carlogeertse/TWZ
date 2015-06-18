@@ -60,7 +60,7 @@
                         Datum:
                     </td>
                     <td>
-                        <input type="date" name="datum">
+                        <input type="date" name="datum" required>
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
@@ -68,7 +68,7 @@
                         Begintijd:
                     </td>
                     <td>
-                        <input type="time" name="begintijd">
+                        <input type="time" name="begintijd" required>
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
@@ -76,7 +76,7 @@
                         Eindtijd:
                     </td>
                     <td>
-                        <input type="time" name="eindtijd">
+                        <input type="time" name="eindtijd" required>
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
@@ -84,7 +84,7 @@
                         Lokaal:
                     </td>
                     <td>
-                        <input type="text" name="lokaal">
+                        <input type="text" name="lokaal" required>
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
@@ -92,7 +92,7 @@
                         Omschrijving:
                     </td>
                     <td>
-                        <input type="text" name="omschrijving">
+                        <input type="text" name="omschrijving" required>
                     </td>
                 </tr>
                 <tr>
