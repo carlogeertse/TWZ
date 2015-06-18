@@ -74,7 +74,7 @@
                         E-mailadres:
                     </td>
                     <td>
-                        <input type="email" name="E-mailadres" required>
+                        <input type="email" name="mailadres" required>
                     </td>
                 </tr>
                 <tr>
