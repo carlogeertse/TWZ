@@ -19,11 +19,12 @@
 
         <h3> Kies een week </h3>
 
-        <form action="beschikInvoerenPost.php" method="POST">
+        <form action="beschikInvoerenPost.php" method="POST" div="weekselectform">
             Selecteer een week:
-            <input type="week" name="week">
-            <input type="submit">
+            <input type="week" name="week" class="picker">
+            <input type="submit" class="submit"/>
         </form>
+        <script src="js/legeWeekCheck.js"></script>
 
     </body>
 </html>
