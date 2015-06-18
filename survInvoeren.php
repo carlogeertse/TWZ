@@ -21,7 +21,7 @@
                 $sql = "INSERT INTO surveillanten(Voornaam, Achternaam, Tussenvoegsel, telefoon, email)
                             VALUES(?,?,?,?,?)";
 
-                $stmt = $conn->prepare($sqli);
+                $stmt = $conn->prepare($sql);
                 $voornaam = $_POST['Voornaam'];
                 $tussenvoegsel = $_POST['Tussenvoegsel'];
                 $achternaam = $_POST['Achternaam'];
