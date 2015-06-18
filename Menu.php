@@ -125,6 +125,11 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href = "survBewerken.php">
+                                        Bewerk surveillant
+                                    </a>
+                                </li>
+                                <li>
 
                                         Rooster surveillanten
 
