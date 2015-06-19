@@ -15,8 +15,6 @@
     Tentamenrooster
 </h1>
 
-<h3> Kies een week </h3>
-
 <form action="tentamenrooster.php" method="POST" div="weekselectform">
     Selecteer een week:
     <input type="week" name="week" class="picker">

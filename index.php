@@ -67,8 +67,6 @@
             <br />
             <br />
             <br />
-            <br />
-            <br />
             <h6 style = "text-align: right;">
                 Een deel van functionaliteit werkt niet in Mozilla Firefox of Internet Explorer
             </h6>

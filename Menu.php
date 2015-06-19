@@ -185,21 +185,6 @@
                             </ul>
                         </li>
                         <li class = "dropdown">
-                            <a href = "#" style = "left: 2px;" data-toggle = "dropdown" class = "dropdown-toggle">
-                                Rooster
-                                <b class = "caret">
-
-                                </b>
-                            </a>
-                            <ul class = "dropdown-menu">
-                                <li>
-
-                                        Rooster opstellen
-
-                                </li>
-                            </ul>
-                        </li>
-                        <li class = "dropdown">
                             <a style = "left: 2px; width: 210px;" href = "#" data-toggle = "dropdown" class = dropdown-toggle"">
                                 Financi&eumlle gegevens
                                 <b class = "caret">

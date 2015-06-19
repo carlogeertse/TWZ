@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
 
-<body>
+<body style = "background-image: url(src/download.jpg); position: relative; background-size: cover;">
 <?php include("Menu.php"); ?>
-<h1>
+<h1 style = "text-align: center;">
     Hier kunt u een tentamen verwijderen:
 </h1>
 <?php
