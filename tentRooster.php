@@ -11,10 +11,8 @@
 <body style="background-image: url(src/download.jpg); position: relative; background-size: cover;">
 <?php include("Menu.php"); ?>
 
-<h1>
-    <b>
-        Tentamenrooster
-    </b>
+<h1 style = "text-align: center;">
+    Tentamenrooster
 </h1>
 
 <h3> Kies een week </h3>

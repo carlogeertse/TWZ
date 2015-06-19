@@ -76,7 +76,7 @@ elseif(isset($_POST['voornaam'])){
 else {
 ?>
 <h1 style="text-align: center;">
-    Kies een surveillant om te bewerken:
+    Kies een surveillant om te bewerken
 </h1>
 
 
@@ -89,7 +89,7 @@ else {
         $result = $conn->query($sqlSurv);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<option value = " . $row['pers_nummer'] . ">" . $row['Voornaam'] . " " . $row['Tussenvoegsel'] . " " . $row['Achternaam'] . "  </option>";
+                echo "<option value = " . $row['pers_nummer'] . ">" . $row['Tussenvoegsel'] . " " . $row['Achternaam'] . ", " . $row['Voornaam'] . "  </option>";
             }
         }
         ?>

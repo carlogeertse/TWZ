@@ -13,7 +13,7 @@
 
     <body>
         <?php include("Menu.php"); ?>
-        <h1>
+        <h1 style = "text-align: center;">
             Waar wil je informatie in invoeren?
         </h1>
 

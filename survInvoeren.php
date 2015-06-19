@@ -18,7 +18,7 @@
             include("Menu.php");
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-                $sql = "INSERT INTO surveillanten(Voornaam, Achternaam, Tussenvoegsel, telefoon, email)
+                $sql = "INSERT INTO surveillanten(Voornaam, Tussenvoegsel, Achternaam, telefoon, email)
                             VALUES(?,?,?,?,?)";
 
                 $stmt = $conn->prepare($sql);
@@ -32,7 +32,7 @@
                 echo "<h3>Surveillant toegevoegd!</h3>";
             }
         ?>
-        <h1>
+        <h1 style = "text-align: center;">
             Invoeren surveillanten
         </h1>
         <table>

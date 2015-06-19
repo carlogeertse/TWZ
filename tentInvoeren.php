@@ -30,7 +30,7 @@
         echo "<h2>Tentamen toegevoegd!</h2>";
     }
         ?>
-        <h1>
+        <h1 style = "text-align: center;">
             Invoeren tentamens
         </h1>
         <?php
@@ -45,7 +45,7 @@
                         Academie:
                     </td>
                     <td>
-                        <select name="academie">
+                        <select style = "height: 25px;" name="academie">
                             <?php if ($academies->num_rows > 0) {
                                 while ($row = $academies->fetch_assoc()) {
                                     echo '<option value=' . $row['academie_ID'] . '>' . $row['naam'] . '</option>';
@@ -60,7 +60,7 @@
                         Datum:
                     </td>
                     <td>
-                        <input type="date" name="datum" required>
+                        <input style = "height: 25px;" type="date" name="datum" required>
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
@@ -68,7 +68,7 @@
                         Begintijd:
                     </td>
                     <td>
-                        <input type="time" name="begintijd" required>
+                        <input style = "height: 25px;" type="time" name="begintijd" required>
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
@@ -76,7 +76,7 @@
                         Eindtijd:
                     </td>
                     <td>
-                        <input type="time" name="eindtijd" required>
+                        <input style = "height: 25px;" type="time" name="eindtijd" required>
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
@@ -84,7 +84,7 @@
                         Lokaal:
                     </td>
                     <td>
-                        <input type="text" name="lokaal" required>
+                        <input style = "height: 25px;" type="text" name="lokaal" required>
                     </td>
                 </tr>
                 <tr id = "spaceUnder">
@@ -92,7 +92,7 @@
                         Omschrijving:
                     </td>
                     <td>
-                        <input type="text" name="omschrijving" required>
+                        <input style = "height: 25px;" type="text" name="omschrijving" required>
                     </td>
                 </tr>
                 <tr>
