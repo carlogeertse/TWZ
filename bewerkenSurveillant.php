@@ -10,6 +10,12 @@ include('connectDB.php');
 </head>
 
 <body style="background-image: url(src/download.jpg); position: relative; background-size: cover;">
+<style>
+    table {
+        font-family: ("Arial Black", Gadget, sans-serif);
+        font-size: 14px;
+    }
+</style>
 <?php
 include('menu.php');
 $sqlLid = "SELECT Tussenvoegsel, Achternaam, Voornaam, telefoon, email, pers_nummer
@@ -34,7 +40,7 @@ if ($result->num_rows > 0) {
         </tr>
         <tr id="spaceUnder">
             <td>
-                Tussenvoegsel
+                Tussenvoegsel:
             </td>
             <td>
                 <input type="text" name="tussenvoegsel" value= <?php echo $row['Tussenvoegsel'] ?>/>
