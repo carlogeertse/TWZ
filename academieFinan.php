@@ -19,13 +19,13 @@
 </style>
 <?php include("Menu.php"); ?>
 <h1 align = "center">
-    Tentamens met academie per surveillant:
+    Tentamens met surveillanten per academie:
 </h1>
-<?php
+    <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sqli = "SELECT *
         FROM tentamen
-        WHERE pers_nummer = " .$_POST['pers_nummer']. "
+        WHERE academie_ID = " .$_POST['academie']. "
         AND datum BETWEEN'" .$_POST['begin']. "' AND '" .$_POST['eind']. "'";
     $tentamens = $conn->query($sqli);
     if($tentamens->num_rows > 0) {
@@ -52,49 +52,49 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 }
-$sql = "SELECT *
-            FROM surveillanten";
-$academies = $conn->query($sql);
+    $sql = "SELECT *
+            FROM academie";
+    $academies = $conn->query($sql);
 
-?>
-<form action="finanacademie.php" method="POST">
-    <table>
-        <tr id = "spaceUnder">
-            <td>
-                surveillant:
-            </td>
-            <td>
-                <select style = "height: 25px;" name="pers_nummer">
-                    <?php if ($academies->num_rows > 0) {
-                        while ($row = $academies->fetch_assoc()) {
-                            echo '<option value=' . $row['pers_nummer'] . '>' . $row['Tussenvoegsel'] . ' ' . $row['Achternaam'] . ', ' . $row['Voornaam'] . '</option>';
+    ?>
+    <form action="academieFinan.php" method="POST">
+        <table>
+            <tr id = "spaceUnder">
+                <td>
+                    Academie:
+                </td>
+                <td>
+                    <select style = "height: 25px;" name="academie">
+                        <?php if ($academies->num_rows > 0) {
+                            while ($row = $academies->fetch_assoc()) {
+                                echo '<option value=' . $row['academie_ID'] . '>' . $row['naam'] . '</option>';
+                            }
                         }
-                    }
-                    ?>
-                    Selecteer een week:
-                </select>
-            </td>
-        </tr>
-        <tr id = "spaceUnder">
-            <td>
-                Begin datum:
-            </td>
-            <td>
-                <input style = "height: 25px;" type="date" name="begin">
-            </td>
-        </tr>
-        <tr id = "spaceUnder">
-            <td>
-                Eind datum:
-            </td>
-            <td>
-                <input style = "height: 25px;" type="date" name="eind">
-            </td>
-        </tr>
-        <tr id = "spaceUnder">
-            <td>
-                <input type="submit" value="Submit">
-            </td>
-        </tr>
-    </table>
-</form>
+                        ?>
+                        Selecteer een week:
+                    </select>
+                </td>
+            </tr>
+            <tr id = "spaceUnder">
+                <td>
+                    Begin datum:
+                </td>
+                <td>
+                    <input style = "height: 25px;" type="date" name="begin">
+                </td>
+            </tr>
+            <tr id = "spaceUnder">
+                <td>
+                    Eind datum:
+                </td>
+                <td>
+                    <input style = "height: 25px;" type="date" name="eind">
+                </td>
+            </tr>
+            <tr id = "spaceUnder">
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>

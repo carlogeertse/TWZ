@@ -212,14 +212,14 @@
                             </a>
                             <ul class = "dropdown-menu">
                                 <li>
-                                    <a href = "finansurveillant.php">
+                                    <a href = "academieFinan.php">
                                         Per academie
                                     </a>
                                 </li>
                                 <li>
-
+                                    <a href = "survFinan.php">
                                         Per surveillant
-
+                                    </a>
                                 </li>
                             </ul>
                         </li>
