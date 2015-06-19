@@ -133,11 +133,6 @@
                                     </a>
                                 </li>
                                 <li>
-
-                                        Surveillanten rooster
-
-                                </li>
-                                <li>
                                     <a href = "beschikInvoeren.php">
                                         Beschikbaarheid surveillant
                                     </a>
@@ -173,13 +168,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href = "tentRooster.php">
-                                        Tentamen rooster
+                                    <a href = "TentVerwijderen.php">
+                                        Tentamen verwijderen
                                     </a>
                                 </li>
                                 <li>
-                                    <a href = "TentVerwijderen.php">
-                                        Tentamen verwijderen
+                                    <a href = "tentRooster.php">
+                                        Inplannen rooster
                                     </a>
                                 </li>
                             </ul>
