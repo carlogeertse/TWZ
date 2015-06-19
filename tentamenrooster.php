@@ -24,9 +24,10 @@
             $week = $weekarray[1];
             $jaar = $weekarray[0];
 
-            $sql= "SELECT T.toets_ID, T.pers_nummer, T.datum, T.begin_tijd, T.eind_tijd, T.lokaal, T.omschrijving, A.naam AS academie
-                    FROM tentamen AS T, academie as A
+            $sql= "SELECT T.toets_ID, T.pers_nummer, S.Voornaam, S.Tussenvoegsel, S.Achternaam, T.datum, T.begin_tijd, T.eind_tijd, T.lokaal, T.omschrijving, A.naam AS academie
+                    FROM tentamen AS T, academie as A, surveillanten as S
                     WHERE A.academie_ID = T.academie_ID
+                    AND WHERE T.pers_nummer = S.pers_nummer
                     AND T.datum BETWEEN'".date("Y-m-d", strtotime($jaar."W".$week."1"))."' AND '".date('Y-m-d', strtotime($jaar."W".$week."5"))."'";
             $result = $conn->query($sql);
 
@@ -35,9 +36,16 @@
 
             $surveillantenresult = $conn->query($surveillantensql);
 
+            $survresultarray = [];
+
+            while($survrow = $surveillantenresult->fetch_assoc())
+            {
+                array_push($survresultarray,$survrow);
+            }
+
+
             if($result->num_rows > 0){
-                echo "<form method='post' action='tentamenrooster.php'>;
-                <table border='widefat'>
+                echo"<table border='widefat'>
                     <tr>
                         <th>academie</th>
                         <th>surveillant</th>
@@ -55,7 +63,8 @@
                             ";
                     if($surveillantenresult->num_rows > 0)
                     {
-                        while($survrow = $surveillantenresult->fetch_assoc()){
+                        echo "<option>".$row['']."</option>";
+                        foreach($survresultarray as $survrow){
                             echo "<option value=".$survrow['pers_nummer'].">".$survrow['Voornaam']." ".$survrow['Tussenvoegsel']." ".$survrow['Achternaam']."</option>";
                         }
                     }
@@ -76,11 +85,7 @@
                 echo"<h2>geen toetsen deze week</h2>";
             }
 
-    function tijdNaarDagdeel($begintijd,$eindtijd)
-    {
-
-    }
-
         ?>
+        <script src="js/tentamenSurvDropScript.js"></script>
     </body>
 </html>
