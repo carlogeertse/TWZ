@@ -100,8 +100,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <a href = "index.php">
-                        <img src = "src/logo2.png" style = "z-index: 1; border-color: #00344C; background-color: #00344C; display: block; margin-left: auto; margin-right: auto; height: 100px;">
+                        <img src = "src/logo2.png" style = "z-index: 1; border-color: #00344C; background-color: #00344C; margin-right: auto; margin-left: auto; display: block; height: 100px;">
                     </a>
+                    <br/>
                     <ul class="nav nav-tabs">
                         <li id = "Home">
                             <a href = "index.php">
@@ -118,27 +119,42 @@
                             <ul class = "dropdown-menu">
                                 <li>
                                     <a href = "survInvoeren.php">
-                                        Toevoegen surveillant
+                                        Surveillant toevoegen
                                     </a>
                                 </li>
                                 <li>
                                     <a href = "survVerwijderen.php">
-                                        Verwijderen surveillant
+                                        Surveillant verwijderen
                                     </a>
                                 </li>
                                 <li>
                                     <a href = "survBewerken.php">
-                                        Bewerk surveillant
+                                        Surveillant bewerken
                                     </a>
                                 </li>
                                 <li>
 
-                                        Rooster surveillanten
+                                        Surveillanten rooster
 
                                 </li>
                                 <li>
                                     <a href = "beschikInvoeren.php">
                                         Beschikbaarheid surveillant
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a href = "#" style = "left: 2px;" data-toggle = "dropdown" class = "dropdown-toggle">
+                               Academie
+                               <b class = "caret">
+
+                               </b>
+                            </a>
+                            <ul class = "dropdown-menu">
+                                <li>
+                                    <a href = "academieToevoegen.php">
+                                        Academie toevoegen
                                     </a>
                                 </li>
                             </ul>
@@ -153,12 +169,17 @@
                             <ul class = "dropdown-menu">
                                 <li>
                                     <a href = "tentInvoeren.php">
-                                        Toevoegen tentamen
+                                        Tentamen toevoegen
                                     </a>
                                 </li>
                                 <li>
                                     <a href = "tentRooster.php">
-                                        Rooster tentamen
+                                        Tentamen rooster
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href = "TentVerwijderen.php">
+                                        Tentamen verwijderen
                                     </a>
                                 </li>
                             </ul>
@@ -173,7 +194,7 @@
                             <ul class = "dropdown-menu">
                                 <li>
 
-                                        Opstellen rooster
+                                        Rooster opstellen
 
                                 </li>
                             </ul>
@@ -187,14 +208,14 @@
                             </a>
                             <ul class = "dropdown-menu">
                                 <li>
-                                    <a href = "finansurveillant.php">
+                                    <a href = "academieFinan.php">
                                         Per academie
                                     </a>
                                 </li>
                                 <li>
-
+                                    <a href = "survFinan.php">
                                         Per surveillant
-
+                                    </a>
                                 </li>
                             </ul>
                         </li>

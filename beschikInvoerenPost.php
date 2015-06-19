@@ -14,6 +14,12 @@
         <h1>
             Invoeren Beschikbaarheid
         </h1>
+        <style>
+            table {
+                font-family: ("Arial Black", Gadget, sans-serif);
+                font-size: 14px;
+            }
+        </style>
 
     <?php
         $weekarray = explode("-W", $_POST['week']);

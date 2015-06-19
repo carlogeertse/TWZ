@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $academies = $conn->query($sql);
 
     ?>
-    <form action="finansurveillant.php" method="POST">
+    <form action="academieFinan.php" method="POST">
         <table>
             <tr id = "spaceUnder">
                 <td>
