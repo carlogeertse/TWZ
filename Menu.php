@@ -178,14 +178,9 @@
                                     </a>
                                 </li>
                                 <li>
-
-                                        Tentamen bewerken
-
-                                </li>
-                                <li>
-
+                                    <a href = "TentVerwijderen.php">
                                         Tentamen verwijderen
-
+                                    </a>
                                 </li>
                             </ul>
                         </li>
