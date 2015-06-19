@@ -12,7 +12,7 @@
         <?php
             include("Menu.php");
         ?>
-        <h1>
+        <h1 style = "text-align: center;">
             Surveillantenrooster
         </h1>
         <br />

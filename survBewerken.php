@@ -26,16 +26,16 @@ if (isset($_POST['pers_nummer'])) {
             <form method="post">
                 <table>
                     <tr id="spaceUnder">
-                        <td>voornaam:</td><td><input type="text" name="voornaam" value='<?php echo $row['Voornaam'] ?>'/></td>
+                        <td>Voornaam:</td><td><input type="text" name="voornaam" value='<?php echo $row['Voornaam'] ?>'/></td>
                     </tr>
                     <tr id="spaceUnder">
-                        <td>tussenvoegsel:</td><td><input type="text" name="tussenvoegsel" value='<?php echo $row['Tussenvoegsel'] ?>'/></td>
+                        <td>Tussenvoegsel:</td><td><input type="text" name="tussenvoegsel" value='<?php echo $row['Tussenvoegsel'] ?>'/></td>
                     </tr>
                     <tr id="spaceUnder">
-                        <td>achternaam:</td><td><input type="text" name="achternaam" value='<?php echo $row['Achternaam'] ?>'/></td>
+                        <td>Achternaam:</td><td><input type="text" name="achternaam" value='<?php echo $row['Achternaam'] ?>'/></td>
                     </tr>
                     <tr id="spaceUnder">
-                        <td>telefoonnummer:</td><td><input type="text" name="telefoon" value='<?php echo $row['telefoon'] ?>'/></td>
+                        <td>Telefoonnummer:</td><td><input type="text" name="telefoon" value='<?php echo $row['telefoon'] ?>'/></td>
                     </tr>
                     <tr id="spaceUnder">
                         <td>E-mailadres:</td><td><input type="text" name="email" value='<?php echo $row['email'] ?>'/></td>
@@ -70,13 +70,13 @@ elseif(isset($_POST['voornaam'])){
     $nummer = $_POST['pers_nummerN'];
     $stmt->bind_param("sssssd", $voornaam, $tussenvoegsel, $achternaam, $telefoonnummer, $mail,$nummer);
     $stmt->execute();
-    echo"succesvol bewerkt";
+    echo"<h3>Succesvol bewerkt</h3>";
 
 }
 else {
 ?>
 <h1 style="text-align: center;">
-    Kies een surveillant om te bewerken:
+    Kies een surveillant om te bewerken
 </h1>
 
 
@@ -89,7 +89,7 @@ else {
         $result = $conn->query($sqlSurv);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<option value = " . $row['pers_nummer'] . ">" . $row['Voornaam'] . " " . $row['Tussenvoegsel'] . " " . $row['Achternaam'] . "  </option>";
+                echo "<option value = " . $row['pers_nummer'] . ">" . $row['Tussenvoegsel'] . " " . $row['Achternaam'] . ", " . $row['Voornaam'] . "  </option>";
             }
         }
         ?>

@@ -12,12 +12,8 @@
         <?php include("Menu.php"); ?>
 
         <h1>
-            <b>
-                Invoeren Beschikbaarheid
-            </b>
+            Invoeren Beschikbaarheid
         </h1>
-
-        <h3> Kies een week </h3>
 
         <form action="beschikInvoerenPost.php" method="POST" div="weekselectform">
             Selecteer een week:
