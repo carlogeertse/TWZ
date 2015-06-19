@@ -100,8 +100,9 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <a href = "index.php">
-                        <img src = "src/logo2.png" style = "z-index: 1; border-color: #00344C; background-color: #00344C; display: block; margin-left: auto; margin-right: auto; height: 100px;">
+                        <img src = "src/logo2.png" style = "z-index: 1; border-color: #00344C; background-color: #00344C; margin-right: auto; margin-left: auto; display: block; height: 100px;">
                     </a>
+                    <br/>
                     <ul class="nav nav-tabs">
                         <li id = "Home">
                             <a href = "index.php">
