@@ -97,7 +97,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type = "submit" value = "Submit">
+                        <input type = "submit" value = "Invoeren">
                     </td>
                 </tr>
             </table>
