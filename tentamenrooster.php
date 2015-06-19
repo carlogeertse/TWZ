@@ -24,10 +24,9 @@
             $week = $weekarray[1];
             $jaar = $weekarray[0];
 
-            $sql= "SELECT T.toets_ID, T.pers_nummer, S.Voornaam, S.Tussenvoegsel, S.Achternaam, T.datum, T.begin_tijd, T.eind_tijd, T.lokaal, T.omschrijving, A.naam AS academie
-                    FROM tentamen AS T, academie as A, surveillanten as S
+            $sql= "SELECT T.toets_ID, T.pers_nummer, T.datum, T.begin_tijd, T.eind_tijd, T.lokaal, T.omschrijving, A.naam AS academie
+                    FROM tentamen AS T, academie as A
                     WHERE A.academie_ID = T.academie_ID
-                    AND WHERE T.pers_nummer = S.pers_nummer
                     AND T.datum BETWEEN'".date("Y-m-d", strtotime($jaar."W".$week."1"))."' AND '".date('Y-m-d', strtotime($jaar."W".$week."5"))."'";
             $result = $conn->query($sql);
 
@@ -63,7 +62,7 @@
                             ";
                     if($surveillantenresult->num_rows > 0)
                     {
-                        echo "<option>".$row['']."</option>";
+                        echo "<option></option>";
                         foreach($survresultarray as $survrow){
                             echo "<option value=".$survrow['pers_nummer'].">".$survrow['Voornaam']." ".$survrow['Tussenvoegsel']." ".$survrow['Achternaam']."</option>";
                         }
