@@ -32,7 +32,7 @@
                 echo "<h3>Surveillant toegevoegd!</h3>";
             }
         ?>
-        <h1>
+        <h1 style = "text-align: center;">
             Invoeren surveillanten
         </h1>
         <table>

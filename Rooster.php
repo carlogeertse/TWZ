@@ -10,8 +10,8 @@
 
     <body>
         <?php include("Menu.php"); ?>
-        <h1>
-            Hier ziet u de huidig beschikbare roosters:
+        <h1 style = "text-align: center;">
+            Hier ziet u de huidig beschikbare roosters
         </h1>
         <ul>
             <li>
