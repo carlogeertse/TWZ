@@ -11,7 +11,6 @@
 <body style="background-image: url(src/download.jpg); position: relative; background-size: cover;">
 <?php include("Menu.php"); ?>
 <?php
-include("Menu.php");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO academie(naam)
@@ -21,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $academie = $_POST['Academie'];
     $stmt->bind_param("s", $academie);
     $stmt->execute();
-    echo "<h3>Surveillant toegevoegd!</h3>";
+    echo "<h3>Academie toegevoegd!</h3>";
 }
 
 ?>
@@ -42,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" name="Academie" required>
             </td>
         </tr>
+        <input type="submit" value="toevoegen">
     </form>
 </table>
 
