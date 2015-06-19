@@ -24,10 +24,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
+<style>
+    table {
+        font-family: ("Arial Black", Gadget, sans-serif);
+        font-size: 14px;
+    }
+</style>
 
 <h1>
     <b>
-        Invoeren Academie
+        Academie toevoegen
     </b>
 </h1>
 
@@ -38,10 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 Academie:
             </td>
             <td>
-                <input type="text" name="Academie" required>
+                <input style = "height: 25px;" type="text" name="Academie" required>
+            </td>
+            <td>
+                <input type="submit" value="Academie toevoegen">
             </td>
         </tr>
-        <input type="submit" value="toevoegen">
     </form>
 </table>
 

@@ -12,6 +12,11 @@
         #spaceUnder > td {
             padding-bottom: 1em;
         }
+
+         table {
+             font-family: ("Arial Black", Gadget, sans-serif);
+             font-size: 14px;
+         }
     </style>
     <?php
     include("Menu.php");
