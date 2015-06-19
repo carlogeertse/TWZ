@@ -12,9 +12,7 @@
 <?php include("Menu.php"); ?>
 
 <h1>
-    <b>
-        Invoeren Beschikbaarheid
-    </b>
+    Invoeren Beschikbaarheid
 </h1>
 
 <?php

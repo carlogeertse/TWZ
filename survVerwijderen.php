@@ -13,7 +13,7 @@
     <body style = "background-image: url(src/download.jpg); position: relative; background-size: cover;">
         <?php include ("Menu.php"); ?>
 
-        <h1>
+        <h1 style = "text-align: center;">
             Welke Surveillant wilt u verwijderen?
         </h1>
 
@@ -31,11 +31,11 @@
                     <td>
                         <select name = "surveillanten">
                             <?php
-                                $sql = "SELECT Achternaam, Voornaam, pers_nummer FROM surveillanten ORDER BY Achternaam;";
+                                $sql = "SELECT Achternaam, Tussenvoegsel, Voornaam, pers_nummer FROM surveillanten ORDER BY Achternaam;";
                                 $sql = $conn->query($sql);
                                 if ($sql-> num_rows > 0) {
                                     while ($row = $sql->fetch_assoc()) {
-                                        echo '<option value = ' . $row['pers_nummer'] . '>' . $row['Achternaam'] . ', ' . $row['Voornaam'] . '</option>';
+                                        echo '<option value = ' . $row['pers_nummer'] . '>' . $row['Tussenvoegsel'] . " " . $row['Achternaam'] . ', ' . $row['Voornaam'] . '</option>';
                                     }
                                 }
                             ?>
